@@ -7,6 +7,7 @@
 	import { locales } from '$i18n/i18n-util';
 	import { loadLocaleAsync } from '$i18n/i18n-util.async';
 	import { replaceLocaleInUrl } from '../../../utils';
+	import GlobeIcon from '$lib/components/icons/GlobeIcon.svelte';
 
 	const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return;
@@ -39,19 +40,25 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<div class="dropdown dropdown-hover">
-	<div role="button" class="btn m-1">i18n</div>
-	<ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-full gap-4">
-		{#each locales as l}
-			<li>
-				<a
-					class:active={l === $locale}
-					href={replaceLocaleInUrl($page.url, l)}
-					class="btn btn-primary btn-sm uppercase"
-				>
-					{l}
-				</a>
-			</li>
-		{/each}
-	</ul>
+<div class="dropdown dropdown-hover hidden lg:flex">
+	<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+		<GlobeIcon />
+	</div>
+	<div
+		class="dropdown-content z-[1] shadow bg-base-200 top-1/2 left-1/2 transform -translate-x-1/2 translate-y-6 rounded-box"
+	>
+		<ul class="menu gap-2">
+			{#each locales as l}
+				<li>
+					<a
+						class:active={l === $locale}
+						href={replaceLocaleInUrl($page.url, l)}
+						class="btn btn-ghost btn-sm uppercase"
+					>
+						{l}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
 </div>
