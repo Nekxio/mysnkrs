@@ -1,13 +1,112 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { assets, base } from '$app/paths';
 	import { locale, LL } from '$i18n/i18n-svelte';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
+	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
+	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
+	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
+	import HamburgerIcon from '$lib/components/icons/HamburgerIcon.svelte';
+	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
 </script>
 
-<header>
-	<a href="{base}/{$locale}">
-		<h1>{$LL.pages.home()}</h1>
-	</a>
-
-	<LocaleSwitcher />
+<header class="navbar sticky top-0 z-30 bg-base-100 p-4">
+	<div class="navbar-start">
+		<div class="dropdown lg:hidden">
+			<div tabindex="0" role="button" class="m-1 btn btn-ghost">
+				<HamburgerIcon />
+			</div>
+			<ul class="dropdown-content menu z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+				<li>
+					<a href="{base}/{$locale}/sneakers">{$LL.header.sneakers()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/artists">{$LL.header.artists()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/contact">{$LL.header.contact()}</a>
+				</li>
+			</ul>
+		</div>
+		<a href="{base}/{$locale}" class="btn btn-ghost hidden lg:flex">
+			<img src="{assets}/images/logo_mysnkrs.svg" alt="MySnkrs logo" class="h-full" />
+		</a>
+		<nav class="menu hidden md:flex">
+			<ul class="menu-horizontal">
+				<li>
+					<a href="{base}/{$locale}/sneakers">{$LL.header.sneakers()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/artists">{$LL.header.artists()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/contact">{$LL.header.contact()}</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="navbar-center lg:hidden">
+		<a href="{base}/{$locale}" class="btn btn-ghost">
+			<img src="{assets}/images/logo_mysnkrs.svg" alt="MySnkrs logo" class="h-full" />
+		</a>
+	</div>
+	<div class="navbar-center hidden lg:block">
+		<form class="flex w-full flex-row items-center rounded-full border-2 border-transparent bg-base-200 px-4 py-1">
+			<SearchIcon />
+			<input
+				id="headerSearch"
+				type="search"
+				placeholder={$LL.header.search()}
+				class="w-72 rounded-full border-none bg-base-200 p-1 outline-none"
+			/>
+		</form>
+	</div>
+	<div class="navbar-end gap-x-3">
+		<div class="hidden lg:flex">
+			<ThemeSwitcher />
+		</div>
+		<LocaleSwitcher />
+		<button class="btn btn-circle btn-ghost hidden lg:flex">
+			<span class="indicator">
+				<HeartIcon />
+			</span>
+		</button>
+		<div class="dropdown dropdown-hover dropdown-end">
+			<div class="m-1 btn btn-ghost btn-circle">
+				<span class="indicator">
+					<ShoppingCartIcon />
+					<span class="badge indicator-item badge-sm badge-primary">8</span>
+				</span>
+			</div>
+			<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
+				<div class="card-body">
+					<span class="text-lg font-bold text-base-content">8 Items</span>
+					<span class="text-base-content">Subtotal: $999</span>
+					<div class="card-actions">
+						<button class="btn btn-primary btn-block">View cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown dropdown-hover dropdown-end">
+			<div class="avatar btn btn-circle btn-ghost">
+				<span class="w-10">
+					<img src="https://picsum.photos/200" alt="profile" class="rounded-full" />
+				</span>
+			</div>
+			<ul class="menu dropdown-content z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+				<li>
+					<a href="{base}/{$locale}/account" class="justify-between">{$LL.header.account()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/orders">{$LL.header.orders()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/settings">{$LL.header.settings()}</a>
+				</li>
+				<li>
+					<a href="{base}/{$locale}/logout">{$LL.header.logout()}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </header>

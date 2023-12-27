@@ -3,5 +3,5 @@
 </script>
 
 <h2>
-	{$LL.welcome()}
+	{$LL.pages.home()}
 </h2>
