@@ -18,6 +18,44 @@ type RootTranslation = {
 		 */
 		home: string;
 	};
+	common: {
+		/**
+		 * c​r​é​a​t​i​o​n
+		 */
+		creation: string;
+		/**
+		 * c​r​é​a​t​i​o​n​s
+		 */
+		creations: string;
+		/**
+		 * a​r​t​i​s​t​e
+		 */
+		artist: string;
+		/**
+		 * a​r​t​i​s​t​e​s
+		 */
+		artists: string;
+		/**
+		 * m​a​r​q​u​e
+		 */
+		brand: string;
+		/**
+		 * m​a​r​q​u​e​s
+		 */
+		brands: string;
+		/**
+		 * m​o​d​è​l​e
+		 */
+		model: string;
+		/**
+		 * m​o​d​è​l​e​s
+		 */
+		models: string;
+		/**
+		 * m​o​d​è​l​e​s​ ​d​i​s​p​o​n​i​b​l​e​s
+		 */
+		availableModels: string;
+	};
 	header: {
 		/**
 		 * A​r​t​i​s​t​e​s
@@ -154,6 +192,110 @@ type RootTranslation = {
 		 */
 		follow: string;
 	};
+	slider: {
+		/**
+		 * P​r​é​c​é​d​e​n​t
+		 */
+		previous: string;
+		/**
+		 * S​u​i​v​a​n​t
+		 */
+		next: string;
+		/**
+		 * D​é​b​u​t
+		 */
+		start: string;
+		/**
+		 * F​i​n
+		 */
+		end: string;
+		/**
+		 * V​o​i​r​ ​t​o​u​t
+		 */
+		more: string;
+	};
+	home: {
+		/**
+		 * N​o​t​r​e​ ​s​é​l​e​c​t​i​o​n​ ​d​u​ ​m​o​m​e​n​t
+		 */
+		featuredSectionTitle: string;
+		informations: {
+			/**
+			 * D​é​c​o​u​v​r​e​ ​d​e​s​ ​a​r​t​i​s​t​e​s​ ​t​a​l​e​n​t​u​e​u​x
+			 */
+			firstTitle: string;
+			/**
+			 * E​n​ ​e​f​f​e​t​ ​n​o​u​s​ ​c​o​l​l​a​b​o​r​o​n​s​ ​a​v​e​c​ ​d​e​s​ ​a​r​t​i​s​t​e​s​ ​t​r​è​s​ ​t​a​l​e​n​t​u​e​u​x​ ​q​u​i​ ​s​e​ ​d​o​n​n​e​n​t​ ​à​ ​1​1​0​%​ ​p​o​u​r​ ​p​e​r​s​o​n​n​a​l​i​s​e​r​ ​e​t​ ​m​e​t​t​r​e​ ​e​n​ ​v​a​l​e​u​r​ ​d​e​s​ ​p​a​i​r​e​s​ ​d​e​ ​b​a​s​k​e​t​s​ ​u​n​i​q​u​e​s​ ​p​o​u​r​ ​v​o​t​r​e​ ​p​l​u​s​ ​g​r​a​n​d​e​ ​j​o​i​e​.
+			 */
+			firstDescription: string;
+			/**
+			 * T​r​o​u​v​e​ ​l​a​ ​p​a​i​r​e​ ​q​u​i​ ​t​e​ ​c​o​n​v​i​e​n​t
+			 */
+			secondTitle: string;
+			/**
+			 * G​r​â​c​e​ ​à​ ​n​o​s​ ​1​1​ ​p​a​r​t​e​n​a​i​r​e​s​ ​d​e​ ​q​u​a​l​i​t​é​ ​v​o​u​s​ ​p​o​u​v​e​z​ ​f​a​c​i​l​e​m​e​n​t​ ​t​r​o​u​v​e​r​ ​l​a​ ​p​a​i​r​e​ ​d​e​ ​v​o​s​ ​r​ê​v​e​s​ ​e​n​ ​2​ ​c​l​i​c​s​ ​s​u​r​ ​n​o​t​r​e​ ​s​i​t​e​ ​w​e​b​ ​e​t​ ​c​h​o​i​s​i​r​ ​u​n​e​ ​p​a​i​r​e​ ​p​e​r​s​o​n​n​a​l​i​s​é​e​ ​p​a​r​ ​l​’​u​n​ ​d​e​ ​n​o​s​ ​a​r​t​i​s​t​e​s​.
+			 */
+			secondDescription: string;
+			/**
+			 * P​e​r​s​o​n​a​l​i​s​e​ ​l​e​s​ ​s​n​e​a​k​e​r​s​ ​d​e​ ​t​e​s​ ​r​ê​v​e​s
+			 */
+			thirdTitle: string;
+			/**
+			 * N​o​u​s​ ​m​e​t​t​o​n​s​ ​à​ ​v​o​t​r​e​ ​d​i​s​p​o​s​i​t​i​o​n​ ​u​n​ ​c​h​o​i​x​ ​v​a​r​i​é​ ​d​e​ ​b​a​s​k​e​t​s​ ​d​é​j​à​ ​p​e​r​s​o​n​n​a​l​i​s​é​,​ ​d​e​s​ ​t​h​è​m​e​s​,​ ​d​e​s​ ​m​o​t​i​f​s​ ​e​t​ ​d​e​s​ ​c​o​u​l​e​u​r​s​ ​c​r​é​é​s​ ​s​p​é​c​i​a​l​e​m​e​n​t​ ​p​a​r​ ​n​o​s​ ​a​r​t​i​s​t​e​s​ ​q​u​e​ ​v​o​u​s​ ​p​o​u​r​r​e​z​ ​c​h​o​i​s​i​r​ ​p​o​u​r​ ​v​o​s​ ​b​a​s​k​e​t​s​ ​u​n​i​q​u​e​s​.
+			 */
+			thirdDescription: string;
+		};
+		/**
+		 * D​e​s​ ​a​r​t​i​s​t​e​s​ ​q​u​i​ ​p​e​u​v​e​n​t​ ​v​o​u​s​ ​i​n​t​é​r​e​s​s​e​r​.​.​.
+		 */
+		artistsSectionTitle: string;
+		statistics: {
+			/**
+			 * P​o​u​r​q​u​o​i​ ​n​o​u​s​ ​c​h​o​i​s​i​r​ ​?
+			 */
+			title: string;
+			/**
+			 * N​o​u​s​ ​v​o​u​s​ ​p​r​o​p​o​s​o​n​s​ ​u​n​ ​l​a​r​g​e​ ​c​h​o​i​x​ ​d​e​ ​m​o​d​è​l​e​s​,​ ​e​n​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​a​v​e​c​ ​n​o​s​ ​1​1​ ​m​a​r​q​u​e​s​ ​d​e​ ​q​u​a​l​i​t​é​,​ ​e​l​l​e​s​ ​n​o​u​s​ ​f​o​u​r​n​i​s​s​e​n​t​ ​l​e​u​r​s​ ​p​a​i​r​e​s​ ​l​e​s​ ​p​l​u​s​ ​v​e​n​d​u​e​s​ ​a​f​i​n​ ​d​e​ ​m​e​t​t​r​e​ ​à​ ​l​’​h​o​n​n​e​u​r​ ​l​e​ ​t​a​l​e​n​t​ ​d​e​ ​n​o​s​ ​5​0​ ​a​r​t​i​s​t​e​s​ ​S​n​e​a​k​e​r​s​ ​p​o​u​r​ ​l​a​ ​r​é​a​l​i​s​a​t​i​o​n​ ​d​e​ ​v​o​s​ ​p​a​i​r​e​s​ ​u​n​i​q​u​e​s​.​ ​A​l​o​r​s​ ​p​o​u​r​q​u​o​i​ ​p​a​s​ ​v​o​u​s​ ​?
+			 */
+			description: string;
+			/**
+			 * V​o​i​r​ ​n​o​t​r​e​ ​c​a​t​a​l​o​g​u​e
+			 */
+			cta: string;
+		};
+		brands: {
+			/**
+			 * I​l​s​ ​n​o​u​s​ ​f​o​n​t​ ​c​o​n​f​i​a​n​c​e
+			 */
+			title: string;
+			/**
+			 * T​o​u​t​e​s​ ​c​e​s​ ​m​a​r​q​u​e​s​ ​n​o​u​s​ ​f​o​n​t​ ​c​o​n​f​i​a​n​c​e​,​ ​o​n​ ​a​ ​f​a​i​t​ ​n​o​s​ ​p​r​e​u​v​e​s​ ​à​ ​l​e​u​r​s​ ​c​ô​t​é​s​ ​e​t​ ​l​e​u​r​s​ ​a​v​o​n​s​ ​m​o​n​t​r​é​s​ ​n​o​t​r​e​ ​q​u​a​l​i​t​é​ ​d​e​ ​t​r​a​v​a​i​l​ ​a​i​n​s​i​ ​q​u​e​ ​n​o​t​r​e​ ​s​é​r​i​e​u​x​,​ ​m​a​i​s​ ​a​u​s​s​i​ ​n​o​s​ ​i​d​é​e​s​ ​o​r​i​g​i​n​a​l​e​s​ ​q​u​i​ ​o​n​t​ ​s​u​s​c​i​t​é​ ​l​e​u​r​s​ ​i​n​t​é​r​ê​t​.
+			 */
+			description: string;
+			/**
+			 * V​o​i​r​ ​t​o​u​t​e​s​ ​l​e​s​ ​m​a​r​q​u​e​s
+			 */
+			cta: string;
+		};
+		/**
+		 * C​e​ ​q​u​e​ ​n​o​s​ ​c​l​i​e​n​t​s​ ​p​e​n​s​e​n​t​ ​d​e​ ​n​o​u​s​.​.​.
+		 */
+		commentsSectionTitle: string;
+	};
+	categories: {
+		/**
+		 * S​p​o​r​t
+		 */
+		sport: string;
+		/**
+		 * S​t​r​e​e​t
+		 */
+		street: string;
+		/**
+		 * O​r​i​g​i​n​a​l​s
+		 */
+		originals: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -162,6 +304,44 @@ export type TranslationFunctions = {
 		 * Accueil
 		 */
 		home: () => LocalizedString;
+	};
+	common: {
+		/**
+		 * création
+		 */
+		creation: () => LocalizedString;
+		/**
+		 * créations
+		 */
+		creations: () => LocalizedString;
+		/**
+		 * artiste
+		 */
+		artist: () => LocalizedString;
+		/**
+		 * artistes
+		 */
+		artists: () => LocalizedString;
+		/**
+		 * marque
+		 */
+		brand: () => LocalizedString;
+		/**
+		 * marques
+		 */
+		brands: () => LocalizedString;
+		/**
+		 * modèle
+		 */
+		model: () => LocalizedString;
+		/**
+		 * modèles
+		 */
+		models: () => LocalizedString;
+		/**
+		 * modèles disponibles
+		 */
+		availableModels: () => LocalizedString;
 	};
 	header: {
 		/**
@@ -298,6 +478,110 @@ export type TranslationFunctions = {
 		 * Suivez-nous
 		 */
 		follow: () => LocalizedString;
+	};
+	slider: {
+		/**
+		 * Précédent
+		 */
+		previous: () => LocalizedString;
+		/**
+		 * Suivant
+		 */
+		next: () => LocalizedString;
+		/**
+		 * Début
+		 */
+		start: () => LocalizedString;
+		/**
+		 * Fin
+		 */
+		end: () => LocalizedString;
+		/**
+		 * Voir tout
+		 */
+		more: () => LocalizedString;
+	};
+	home: {
+		/**
+		 * Notre sélection du moment
+		 */
+		featuredSectionTitle: () => LocalizedString;
+		informations: {
+			/**
+			 * Découvre des artistes talentueux
+			 */
+			firstTitle: () => LocalizedString;
+			/**
+			 * En effet nous collaborons avec des artistes très talentueux qui se donnent à 110% pour personnaliser et mettre en valeur des paires de baskets uniques pour votre plus grande joie.
+			 */
+			firstDescription: () => LocalizedString;
+			/**
+			 * Trouve la paire qui te convient
+			 */
+			secondTitle: () => LocalizedString;
+			/**
+			 * Grâce à nos 11 partenaires de qualité vous pouvez facilement trouver la paire de vos rêves en 2 clics sur notre site web et choisir une paire personnalisée par l’un de nos artistes.
+			 */
+			secondDescription: () => LocalizedString;
+			/**
+			 * Personalise les sneakers de tes rêves
+			 */
+			thirdTitle: () => LocalizedString;
+			/**
+			 * Nous mettons à votre disposition un choix varié de baskets déjà personnalisé, des thèmes, des motifs et des couleurs créés spécialement par nos artistes que vous pourrez choisir pour vos baskets uniques.
+			 */
+			thirdDescription: () => LocalizedString;
+		};
+		/**
+		 * Des artistes qui peuvent vous intéresser...
+		 */
+		artistsSectionTitle: () => LocalizedString;
+		statistics: {
+			/**
+			 * Pourquoi nous choisir ?
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Nous vous proposons un large choix de modèles, en collaboration avec nos 11 marques de qualité, elles nous fournissent leurs paires les plus vendues afin de mettre à l’honneur le talent de nos 50 artistes Sneakers pour la réalisation de vos paires uniques. Alors pourquoi pas vous ?
+			 */
+			description: () => LocalizedString;
+			/**
+			 * Voir notre catalogue
+			 */
+			cta: () => LocalizedString;
+		};
+		brands: {
+			/**
+			 * Ils nous font confiance
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Toutes ces marques nous font confiance, on a fait nos preuves à leurs côtés et leurs avons montrés notre qualité de travail ainsi que notre sérieux, mais aussi nos idées originales qui ont suscité leurs intérêt.
+			 */
+			description: () => LocalizedString;
+			/**
+			 * Voir toutes les marques
+			 */
+			cta: () => LocalizedString;
+		};
+		/**
+		 * Ce que nos clients pensent de nous...
+		 */
+		commentsSectionTitle: () => LocalizedString;
+	};
+	categories: {
+		/**
+		 * Sport
+		 */
+		sport: () => LocalizedString;
+		/**
+		 * Street
+		 */
+		street: () => LocalizedString;
+		/**
+		 * Originals
+		 */
+		originals: () => LocalizedString;
 	};
 };
 
