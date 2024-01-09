@@ -5,7 +5,7 @@
 	import TikTokIcon from '$lib/components/icons/TikTokIcon.svelte';
 </script>
 
-<footer>
+<footer class="mt-20 bg-base-200">
 	<div class="flex w-full justify-center px-10 py-6 md:justify-start">
 		<a href="/">
 			<img src="images/logo_mysnkrs.svg" alt="Facebook" class="w-28" />
