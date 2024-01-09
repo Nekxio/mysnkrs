@@ -7,7 +7,7 @@
 </script>
 
 <Header />
-<main>
+<main class="container mx-auto px-6 space-y-10 md:space-y-16 lg:px-0">
 	<slot />
 </main>
 <Footer />

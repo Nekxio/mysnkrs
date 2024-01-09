@@ -30,7 +30,7 @@
 		<a href="{base}/{$locale}" class="btn btn-ghost hidden lg:flex">
 			<img src="{assets}/images/logo_mysnkrs.svg" alt="MySnkrs logo" class="h-full" />
 		</a>
-		<nav class="menu hidden md:flex">
+		<nav class="menu hidden lg:flex">
 			<ul class="menu-horizontal">
 				<li>
 					<a href="{base}/{$locale}/sneakers">{$LL.header.sneakers()}</a>
