@@ -2,10 +2,15 @@
 	import HomeCarousel from '$lib/components/carousel/HomeCarousel.svelte';
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
 	import LL, { locale } from '$i18n/i18n-svelte';
-	import { slides, items, artists, brands, comments } from '../../data/example';
+	import { slides, items, artists, brands } from '../../data/example';
 	import { assets, base } from '$app/paths';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import BrandIcon from '$lib/components/icons/BrandIcon.svelte';
+	import type { PageData } from './$types';
+	import type { Product } from '../../types/product';
+
+	export let data: PageData;
+	const products: Product[] = data.products as Product[];
 </script>
 
 <svelte:head>
@@ -13,7 +18,11 @@
 </svelte:head>
 
 <HomeCarousel {slides} />
-<Carousel elements={items} swiper="popularItems" sectionTitle={$LL.home.featuredSectionTitle()} />
+{#if products}
+	<Carousel {products} swiper="popularItems" sectionTitle={$LL.home.featuredSectionTitle()} />
+{:else}
+	<p>Empty product</p>
+{/if}
 <section id="informations">
 	<div class="grid grid-cols-1 md:grid-cols-2 rounded-xl bg-base-200 overflow-hidden">
 		<div class="flex flex-col justify-center p-10 order-1 lg:p-20">
@@ -69,7 +78,6 @@
 		</div>
 	</div>
 </section>
-<Carousel elements={artists} swiper="artists" sectionTitle={$LL.home.artistsSectionTitle()} />
 <section
 	id="statistics"
 	class="hero bg-base-200 relative left-1/2 w-screen h-fit -translate-x-1/2 transform overflow-hidden"
@@ -140,4 +148,3 @@
 		</a>
 	</div>
 </section>
-<Carousel elements={comments} swiper="comments" sectionTitle={$LL.home.commentsSectionTitle()} />
