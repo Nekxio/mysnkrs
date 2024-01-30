@@ -4,34 +4,16 @@
 	import Swiper from 'swiper/bundle';
 	import 'swiper/css/bundle';
 	import { A11y, Navigation } from 'swiper/modules';
-	import type { SneakersItem, SneakersArtist, SneakersComment } from '../../../types/sneakers';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
-	import SneakersCard from '$lib/components/common/SneakersCard.svelte';
-	import ArtistCard from '$lib/components/common/ArtistCard.svelte';
-	import CommentCard from '$lib/components/common/CommentCard.svelte';
+	import ProductCard from '$lib/components/common/ProductCard.svelte';
+	import type { Product } from '../../../types/product';
 
-	export let elements: SneakersItem[] | SneakersArtist[] | SneakersComment[] = [];
+	export let products: Product[] = [];
 	export let swiper: string;
 	export let sectionTitle: string;
-
-	function isSneakersItem(elements: SneakersItem[] | SneakersArtist[] | SneakersComment[]): elements is SneakersItem[] {
-		return 'artist' in elements[0];
-	}
-
-	function isSneakersArtist(
-		elements: SneakersItem[] | SneakersArtist[] | SneakersComment[]
-	): elements is SneakersArtist[] {
-		return 'creations' in elements[0];
-	}
-
-	function isSneakersComment(
-		elements: SneakersItem[] | SneakersArtist[] | SneakersComment[]
-	): elements is SneakersComment[] {
-		return 'comment' in elements[0];
-	}
 
 	function initSwiperElements(swiperElement: string) {
 		if (swiperElement) {
@@ -108,7 +90,6 @@
 	}
 
 	onMount(() => {
-		isSneakersComment(elements);
 		initSwiperElements(swiper);
 	});
 </script>
@@ -132,28 +113,12 @@
 		</div>
 		<div class="flex flex-row items-center">
 			<div id={`${swiper}`} class="swiper">
-				<div class="swiper-wrapper flex items-center">
-					{#if isSneakersItem(elements)}
-						{#each elements as element}
-							<div class="swiper-slide">
-								<SneakersCard sneakers={element} />
-							</div>
-						{/each}
-					{/if}
-					{#if isSneakersArtist(elements)}
-						{#each elements as element}
-							<div class="swiper-slide">
-								<ArtistCard artist={element} />
-							</div>
-						{/each}
-					{/if}
-					{#if isSneakersComment(elements)}
-						{#each elements as element}
-							<div class="swiper-slide">
-								<CommentCard comment={element} />
-							</div>
-						{/each}
-					{/if}
+				<div class="swiper-wrapper">
+					{#each products as product}
+						<div class="swiper-slide">
+							<ProductCard {product} />
+						</div>
+					{/each}
 					<div class="swiper-slide">
 						<div class="w-fit">
 							<a href="{base}/{$locale}" class="hover:underline">
