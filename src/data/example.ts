@@ -1,26 +1,32 @@
 import dayjs from 'dayjs';
+import type { HomeCarousel } from '../types/carousel';
 import type { Sneakers, SneakersArtist, SneakersBrand, SneakersCategory, SneakersComment } from '../types/sneakers';
 
-export const slides: { imageAlt: string; imageSrc: string }[] = [
+export const slides: HomeCarousel[] = [
 	{
-		imageAlt: 'Slide 1',
-		imageSrc: 'https://picsum.photos/seed/1/800/400'
+		imageSrc: 'https://picsum.photos/seed/1/800/400',
+		title: 'Slide 1',
+		description: 'Description 1'
 	},
 	{
-		imageAlt: 'Slide 2',
-		imageSrc: 'https://picsum.photos/seed/2/800/400'
+		imageSrc: 'https://picsum.photos/seed/2/800/400',
+		title: 'Slide 2',
+		description: 'Description 2'
 	},
 	{
-		imageAlt: 'Slide 3',
-		imageSrc: 'https://picsum.photos/seed/3/800/400'
+		imageSrc: 'https://picsum.photos/seed/3/800/400',
+		title: 'Slide 3',
+		description: 'Description 3'
 	},
 	{
-		imageAlt: 'Slide 4',
-		imageSrc: 'https://picsum.photos/seed/4/800/400'
+		imageSrc: 'https://picsum.photos/seed/4/800/400',
+		title: 'Slide 4',
+		description: 'Description 4'
 	},
 	{
-		imageAlt: 'Slide 5',
-		imageSrc: 'https://picsum.photos/seed/5/800/400'
+		imageSrc: 'https://picsum.photos/seed/5/800/400',
+		title: 'Slide 5',
+		description: 'Description 5'
 	}
 ];
 export const artists: SneakersArtist[] = [

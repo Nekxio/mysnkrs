@@ -6,6 +6,7 @@
 	import { A11y, Autoplay, Navigation, Pagination } from 'swiper/modules';
 	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
+	import type { HomeCarousel } from '../../../types/carousel';
 
 	function initHomeSwiper(node: HTMLElement | null) {
 		if (node) {
@@ -58,7 +59,7 @@
 		}
 	}
 
-	export let slides: Array<{ imageAlt: string; imageSrc: string }> = [];
+	export let slides: HomeCarousel[] = [];
 </script>
 
 {#if browser}
@@ -67,7 +68,15 @@
 			<div class="swiper-wrapper">
 				{#each slides as item}
 					<div class="swiper-slide">
-						<img src={item.imageSrc} alt={item.imageAlt} class="aspect-video w-full object-cover backdrop-blur-sm" />
+						<div>
+							<img src={item.imageSrc} alt={item.title} class="aspect-video w-full object-cover brightness-50" />
+							<div
+								class="absolute top-0 left-0 flex flex-col justify-center w-full h-52 py-20 px-12 md:px-20 md:py-52 lg:px-32"
+							>
+								<h2 class="text-3xl md:text-5xl font-bold text-white">{item.title}</h2>
+								<p class="text-xl md:text-2xl text-white mt-4">{item.description}</p>
+							</div>
+						</div>
 					</div>
 				{/each}
 			</div>
@@ -92,6 +101,7 @@
 		.swiper-pagination-bullet {
 			@apply bg-primary;
 		}
+
 		.swiper-pagination-bullet-active {
 			@apply bg-primary;
 		}
