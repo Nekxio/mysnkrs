@@ -55,6 +55,18 @@ type RootTranslation = {
 		 * m​o​d​è​l​e​s​ ​d​i​s​p​o​n​i​b​l​e​s
 		 */
 		availableModels: string;
+		/**
+		 * A​u​c​u​n​ ​p​r​o​d​u​i​t​ ​t​r​o​u​v​é
+		 */
+		emptyProduct: string;
+		/**
+		 * A​u​c​u​n​ ​p​r​o​d​u​i​t​ ​t​r​o​u​v​é
+		 */
+		emptyReviews: string;
+		/**
+		 * A​u​c​u​n​ ​r​é​s​u​l​t​a​t​ ​t​r​o​u​v​é
+		 */
+		emptyCarousel: string;
 	};
 	header: {
 		/**
@@ -342,6 +354,18 @@ export type TranslationFunctions = {
 		 * modèles disponibles
 		 */
 		availableModels: () => LocalizedString;
+		/**
+		 * Aucun produit trouvé
+		 */
+		emptyProduct: () => LocalizedString;
+		/**
+		 * Aucun produit trouvé
+		 */
+		emptyReviews: () => LocalizedString;
+		/**
+		 * Aucun résultat trouvé
+		 */
+		emptyCarousel: () => LocalizedString;
 	};
 	header: {
 		/**
