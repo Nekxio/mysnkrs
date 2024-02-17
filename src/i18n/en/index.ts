@@ -13,7 +13,10 @@ const en = {
 		brands: 'brands',
 		model: 'model',
 		models: 'models',
-		availableModels: 'Available models'
+		availableModels: 'Available models',
+		emptyProduct: 'No product found',
+		emptyReviews: 'No review found',
+		emptyCarousel: 'No result found'
 	},
 	header: {
 		artists: 'Artists',

@@ -13,7 +13,10 @@ const fr = {
 		brands: 'marques',
 		model: 'modèle',
 		models: 'modèles',
-		availableModels: 'modèles disponibles'
+		availableModels: 'modèles disponibles',
+		emptyProduct: 'Aucun produit trouvé',
+		emptyReviews: 'Aucun produit trouvé',
+		emptyCarousel: 'Aucun résultat trouvé'
 	},
 	header: {
 		artists: 'Artistes',
