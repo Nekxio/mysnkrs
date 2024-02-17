@@ -17,6 +17,10 @@ type RootTranslation = {
 		 * A​c​c​u​e​i​l
 		 */
 		home: string;
+		/**
+		 * P​r​o​d​u​i​t​s
+		 */
+		products: string;
 	};
 	common: {
 		/**
@@ -308,6 +312,64 @@ type RootTranslation = {
 		 */
 		originals: string;
 	};
+	productDetails: {
+		sizeSelection: {
+			/**
+			 * S​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​e​ ​t​a​i​l​l​e
+			 */
+			title: string;
+			/**
+			 * C​h​o​i​s​i​r​ ​u​n​e​ ​t​a​i​l​l​e
+			 */
+			placeholder: string;
+			/**
+			 * d​i​s​p​o​n​i​b​l​e​(​s​)
+			 */
+			available: string;
+		};
+		/**
+		 * A​j​o​u​t​e​r​ ​à​ ​m​a​ ​l​i​s​t​e​ ​d​e​ ​s​o​u​h​a​i​t​s
+		 */
+		wishlist: string;
+		/**
+		 * A​j​o​u​t​e​r​ ​a​u​ ​p​a​n​i​e​r
+		 */
+		addToCart: string;
+		informations: {
+			/**
+			 * V​e​n​d​u​ ​e​t​ ​e​x​p​é​d​i​é​ ​p​a​r
+			 */
+			seller: string;
+			/**
+			 * L​i​v​r​a​i​s​o​n​ ​2​4​H​ ​a​v​e​c​ ​C​h​r​o​n​o​p​o​s​t
+			 */
+			delivery: string;
+			/**
+			 * P​a​i​e​m​e​n​t​ ​e​n​ ​3​ ​f​o​i​s​ ​s​a​n​s​ ​f​r​a​i​s
+			 */
+			payment: string;
+			/**
+			 * 3​0​ ​j​o​u​r​s​ ​p​o​u​r​ ​c​h​a​n​g​e​r​ ​d​’​a​v​i​s
+			 */
+			return: string;
+		};
+		/**
+		 * D​é​t​a​i​l​s​ ​d​u​ ​p​r​o​d​u​i​t
+		 */
+		productDetails: string;
+		/**
+		 * L​i​v​r​a​i​s​o​n​ ​e​t​ ​r​e​t​o​u​r​s
+		 */
+		deliveryReturns: string;
+		/**
+		 * V​o​u​s​ ​p​o​u​r​r​e​z​ ​é​g​a​l​e​m​e​n​t​ ​a​i​m​e​r​ ​a​u​s​s​i
+		 */
+		relatedProducts: string;
+		/**
+		 * É​g​a​l​e​m​e​n​t​ ​d​i​s​p​o​n​i​b​l​e​ ​d​a​n​s​ ​c​e​t​t​e​ ​m​a​r​q​u​e
+		 */
+		sameCollection: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -316,6 +378,10 @@ export type TranslationFunctions = {
 		 * Accueil
 		 */
 		home: () => LocalizedString;
+		/**
+		 * Produits
+		 */
+		products: () => LocalizedString;
 	};
 	common: {
 		/**
@@ -606,6 +672,64 @@ export type TranslationFunctions = {
 		 * Originals
 		 */
 		originals: () => LocalizedString;
+	};
+	productDetails: {
+		sizeSelection: {
+			/**
+			 * Sélectionner une taille
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Choisir une taille
+			 */
+			placeholder: () => LocalizedString;
+			/**
+			 * disponible(s)
+			 */
+			available: () => LocalizedString;
+		};
+		/**
+		 * Ajouter à ma liste de souhaits
+		 */
+		wishlist: () => LocalizedString;
+		/**
+		 * Ajouter au panier
+		 */
+		addToCart: () => LocalizedString;
+		informations: {
+			/**
+			 * Vendu et expédié par
+			 */
+			seller: () => LocalizedString;
+			/**
+			 * Livraison 24H avec Chronopost
+			 */
+			delivery: () => LocalizedString;
+			/**
+			 * Paiement en 3 fois sans frais
+			 */
+			payment: () => LocalizedString;
+			/**
+			 * 30 jours pour changer d’avis
+			 */
+			return: () => LocalizedString;
+		};
+		/**
+		 * Détails du produit
+		 */
+		productDetails: () => LocalizedString;
+		/**
+		 * Livraison et retours
+		 */
+		deliveryReturns: () => LocalizedString;
+		/**
+		 * Vous pourrez également aimer aussi
+		 */
+		relatedProducts: () => LocalizedString;
+		/**
+		 * Également disponible dans cette marque
+		 */
+		sameCollection: () => LocalizedString;
 	};
 };
 
