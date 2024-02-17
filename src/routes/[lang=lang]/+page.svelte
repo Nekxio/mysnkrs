@@ -18,11 +18,8 @@
 </svelte:head>
 
 <HomeCarousel {slides} />
-{#if products}
-	<Carousel {products} swiper="popularItems" sectionTitle={$LL.home.featuredSectionTitle()} />
-{:else}
-	<p>Empty product</p>
-{/if}
+
+<Carousel {products} swiper="popularItems" sectionTitle={$LL.home.featuredSectionTitle()} />
 <section id="informations">
 	<div class="grid grid-cols-1 md:grid-cols-2 rounded-xl bg-base-200 overflow-hidden">
 		<div class="flex flex-col justify-center p-10 order-1 lg:p-20">
