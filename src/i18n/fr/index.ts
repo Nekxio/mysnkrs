@@ -2,7 +2,8 @@ import type { BaseTranslation } from '../i18n-types.js';
 
 const fr = {
 	pages: {
-		home: 'Accueil'
+		home: 'Accueil',
+		products: 'Produits'
 	},
 	common: {
 		creation: 'création',
@@ -94,6 +95,25 @@ const fr = {
 		sport: 'Sport',
 		street: 'Street',
 		originals: 'Originals'
+	},
+	productDetails: {
+		sizeSelection: {
+			title: 'Sélectionner une taille',
+			placeholder: 'Choisir une taille',
+			available: 'disponible(s)'
+		},
+		wishlist: 'Ajouter à ma liste de souhaits',
+		addToCart: 'Ajouter au panier',
+		informations: {
+			seller: 'Vendu et expédié par',
+			delivery: 'Livraison 24H avec Chronopost',
+			payment: 'Paiement en 3 fois sans frais',
+			return: '30 jours pour changer d’avis'
+		},
+		productDetails: 'Détails du produit',
+		deliveryReturns: 'Livraison et retours',
+		relatedProducts: 'Vous pourrez également aimer aussi',
+		sameCollection: 'Également disponible dans cette marque'
 	}
 } satisfies BaseTranslation;
 

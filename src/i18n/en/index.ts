@@ -2,7 +2,8 @@ import type { BaseTranslation } from '../i18n-types';
 
 const en = {
 	pages: {
-		home: 'Home'
+		home: 'Home',
+		products: 'Products'
 	},
 	common: {
 		creation: 'creation',
@@ -88,6 +89,25 @@ const en = {
 		sport: 'Sport',
 		street: 'Street',
 		originals: 'Originals'
+	},
+	productDetails: {
+		sizeSelection: {
+			title: 'Choose your size',
+			placeholder: 'Choose a size',
+			available: 'available'
+		},
+		wishlist: 'Add to wishlist',
+		addToCart: 'Add to cart',
+		informations: {
+			seller: 'Sale and send by',
+			delivery: 'Delivery 24hours with Chronopost',
+			payment: 'Payment in 3 instalments, free of charge',
+			return: '30 jours pour changer d’avis'
+		},
+		productDetails: 'Product details',
+		deliveryReturns: 'Delivery and returns',
+		relatedProducts: 'You may also like',
+		sameCollection: 'Also available by the same brand'
 	}
 } satisfies BaseTranslation;
 

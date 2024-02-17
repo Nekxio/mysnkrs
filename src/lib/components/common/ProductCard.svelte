@@ -16,7 +16,7 @@
 
 {#if product}
 	<a
-		href="{base}/{$locale}/product/{product.handle}"
+		href="{base}/{$locale}/products/{product.handle}"
 		class="card rounded-xl w-auto bg-base-200 scale-95 transition-all ease-in-out duration-500 h-80 hover:scale-100 flex flex-col"
 	>
 		<figure class="h-1/2">
