@@ -7,6 +7,9 @@
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import HamburgerIcon from '$lib/components/icons/HamburgerIcon.svelte';
 	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
+	import type { CustomerDTO } from '@medusajs/types';
+
+	export let user: CustomerDTO | undefined;
 </script>
 
 <header class="navbar sticky top-0 z-30 bg-base-100 p-4">
@@ -65,48 +68,52 @@
 			<ThemeSwitcher />
 		</div>
 		<LocaleSwitcher />
-		<button class="btn btn-circle btn-ghost hidden lg:flex">
-			<span class="indicator">
-				<HeartIcon />
-			</span>
-		</button>
-		<div class="dropdown dropdown-hover dropdown-end">
-			<div class="m-1 btn btn-ghost btn-circle">
+		{#if user}
+			<button class="btn btn-circle btn-ghost hidden lg:flex">
 				<span class="indicator">
-					<ShoppingCartIcon />
-					<span class="badge indicator-item badge-sm badge-primary">8</span>
+					<HeartIcon />
 				</span>
-			</div>
-			<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
-				<div class="card-body">
-					<span class="text-lg font-bold text-base-content">8 Items</span>
-					<span class="text-base-content">Subtotal: $999</span>
-					<div class="card-actions">
-						<button class="btn btn-primary btn-block">View cart</button>
+			</button>
+			<div class="dropdown dropdown-hover dropdown-end">
+				<div class="m-1 btn btn-ghost btn-circle">
+					<span class="indicator">
+						<ShoppingCartIcon />
+						<span class="badge indicator-item badge-sm badge-primary">8</span>
+					</span>
+				</div>
+				<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
+					<div class="card-body">
+						<span class="text-lg font-bold text-base-content">8 Items</span>
+						<span class="text-base-content">Subtotal: $999</span>
+						<div class="card-actions">
+							<button class="btn btn-primary btn-block">View cart</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="dropdown dropdown-hover dropdown-end">
-			<div class="avatar btn btn-circle btn-ghost">
-				<span class="w-10">
-					<img src="https://picsum.photos/200" alt="profile" class="rounded-full" />
-				</span>
+			<div class="dropdown dropdown-hover dropdown-end">
+				<div class="avatar btn btn-circle btn-ghost">
+					<span class="w-10">
+						<img src="https://picsum.photos/200" alt="profile" class="rounded-full" />
+					</span>
+				</div>
+				<ul class="menu dropdown-content z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+					<li>
+						<a href="{base}/{$locale}/account" class="justify-between">{$LL.header.account()}</a>
+					</li>
+					<li>
+						<a href="{base}/{$locale}/orders">{$LL.header.orders()}</a>
+					</li>
+					<li>
+						<a href="{base}/{$locale}/settings">{$LL.header.settings()}</a>
+					</li>
+					<li>
+						<a href="{base}/{$locale}/logout">{$LL.header.logout()}</a>
+					</li>
+				</ul>
 			</div>
-			<ul class="menu dropdown-content z-[1] p-2 shadow bg-base-200 rounded-box w-52">
-				<li>
-					<a href="{base}/{$locale}/account" class="justify-between">{$LL.header.account()}</a>
-				</li>
-				<li>
-					<a href="{base}/{$locale}/orders">{$LL.header.orders()}</a>
-				</li>
-				<li>
-					<a href="{base}/{$locale}/settings">{$LL.header.settings()}</a>
-				</li>
-				<li>
-					<a href="{base}/{$locale}/logout">{$LL.header.logout()}</a>
-				</li>
-			</ul>
-		</div>
+		{:else}
+			<a href="{base}/{$locale}/account" class="btn btn-primary">{$LL.header.login()}</a>
+		{/if}
 	</div>
 </header>

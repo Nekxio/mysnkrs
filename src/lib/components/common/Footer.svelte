@@ -3,12 +3,13 @@
 	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
 	import InstagramIcon from '$lib/components/icons/InstagramIcon.svelte';
 	import TikTokIcon from '$lib/components/icons/TikTokIcon.svelte';
+	import { assets } from '$app/paths';
 </script>
 
 <footer class="mt-20 bg-base-200">
 	<div class="flex w-full justify-center px-10 py-6 md:justify-start">
 		<a href="/">
-			<img src="images/logo_mysnkrs.svg" alt="Facebook" class="w-28" />
+			<img src="{assets}/images/logo_mysnkrs.svg" alt="Logo MySnkrs" class="w-28" />
 		</a>
 	</div>
 	<div class="footer justify-center px-10 py-6 md:justify-between">
