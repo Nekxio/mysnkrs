@@ -114,6 +114,29 @@ const fr = {
 		deliveryReturns: 'Livraison et retours',
 		relatedProducts: 'Vous pourrez également aimer aussi',
 		sameCollection: 'Également disponible dans cette marque'
+	},
+	account: {
+		auth: {
+			firstName: 'Prénom',
+			lastName: 'Nom',
+			email: 'Adresse e-mail',
+			password: 'Mot de passe',
+			register: 'Créer un compte',
+			login: 'Se connecter',
+			loginSection: {
+				forgotPassword: 'Mot de passe oublié ?',
+				noAccountTitle: 'Vous n’avez pas de compte ? Inscrivez-vous !',
+				noAccountDescription:
+					'Vous souhaitez avoir votre paire unique personnalisée par des artistes de talent ? Alors rejoignez-nous !',
+				register: 'Créer un compte'
+			},
+			registerSection: {
+				confirmPassword: 'Confirmer le mot de passe',
+				alreadyAccountTitle: 'Vous avez déjà un compte ? Connectez-vous !',
+				alreadyAccountDescription:
+					'Connectez-vous afin de retrouvez vos artistes, designs favoris ainsi que nos suggestions adaptées à votre profil !'
+			}
+		}
 	}
 } satisfies BaseTranslation;
 

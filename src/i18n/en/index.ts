@@ -108,6 +108,29 @@ const en = {
 		deliveryReturns: 'Delivery and returns',
 		relatedProducts: 'You may also like',
 		sameCollection: 'Also available by the same brand'
+	},
+	account: {
+		auth: {
+			firstName: 'First name',
+			lastName: 'Last name',
+			email: 'Email',
+			password: 'Password',
+			register: 'Register',
+			login: 'Log in',
+			loginSection: {
+				forgotPassword: 'Forgot your password?',
+				noAccountTitle: 'You don’t have an account ? Register now !',
+				noAccountDescription:
+					'Would you like to have your own unique pair personalized by talented artists? Then join us!',
+				register: 'Créer un compte'
+			},
+			registerSection: {
+				confirmPassword: 'Confirm password',
+				alreadyAccountTitle: 'Already have an account? Log in!',
+				alreadyAccountDescription:
+					'Log in to find your favorite artists, designs and suggestions tailored to your profile!'
+			}
+		}
 	}
 } satisfies BaseTranslation;
 

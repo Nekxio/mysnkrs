@@ -370,6 +370,66 @@ type RootTranslation = {
 		 */
 		sameCollection: string;
 	};
+	account: {
+		auth: {
+			/**
+			 * P​r​é​n​o​m
+			 */
+			firstName: string;
+			/**
+			 * N​o​m
+			 */
+			lastName: string;
+			/**
+			 * A​d​r​e​s​s​e​ ​e​-​m​a​i​l
+			 */
+			email: string;
+			/**
+			 * M​o​t​ ​d​e​ ​p​a​s​s​e
+			 */
+			password: string;
+			/**
+			 * C​r​é​e​r​ ​u​n​ ​c​o​m​p​t​e
+			 */
+			register: string;
+			/**
+			 * S​e​ ​c​o​n​n​e​c​t​e​r
+			 */
+			login: string;
+			loginSection: {
+				/**
+				 * M​o​t​ ​d​e​ ​p​a​s​s​e​ ​o​u​b​l​i​é​ ​?
+				 */
+				forgotPassword: string;
+				/**
+				 * V​o​u​s​ ​n​’​a​v​e​z​ ​p​a​s​ ​d​e​ ​c​o​m​p​t​e​ ​?​ ​I​n​s​c​r​i​v​e​z​-​v​o​u​s​ ​!
+				 */
+				noAccountTitle: string;
+				/**
+				 * V​o​u​s​ ​s​o​u​h​a​i​t​e​z​ ​a​v​o​i​r​ ​v​o​t​r​e​ ​p​a​i​r​e​ ​u​n​i​q​u​e​ ​p​e​r​s​o​n​n​a​l​i​s​é​e​ ​p​a​r​ ​d​e​s​ ​a​r​t​i​s​t​e​s​ ​d​e​ ​t​a​l​e​n​t​ ​?​ ​A​l​o​r​s​ ​r​e​j​o​i​g​n​e​z​-​n​o​u​s​ ​!
+				 */
+				noAccountDescription: string;
+				/**
+				 * C​r​é​e​r​ ​u​n​ ​c​o​m​p​t​e
+				 */
+				register: string;
+			};
+			registerSection: {
+				/**
+				 * C​o​n​f​i​r​m​e​r​ ​l​e​ ​m​o​t​ ​d​e​ ​p​a​s​s​e
+				 */
+				confirmPassword: string;
+				/**
+				 * V​o​u​s​ ​a​v​e​z​ ​d​é​j​à​ ​u​n​ ​c​o​m​p​t​e​ ​?​ ​C​o​n​n​e​c​t​e​z​-​v​o​u​s​ ​!
+				 */
+				alreadyAccountTitle: string;
+				/**
+				 * C​o​n​n​e​c​t​e​z​-​v​o​u​s​ ​a​f​i​n​ ​d​e​ ​r​e​t​r​o​u​v​e​z​ ​v​o​s​ ​a​r​t​i​s​t​e​s​,​ ​d​e​s​i​g​n​s​ ​f​a​v​o​r​i​s​ ​a​i​n​s​i​ ​q​u​e​ ​n​o​s​ ​s​u​g​g​e​s​t​i​o​n​s​ ​a​d​a​p​t​é​e​s​ ​à​ ​v​o​t​r​e​ ​p​r​o​f​i​l​ ​!
+				 */
+				alreadyAccountDescription: string;
+			};
+		};
+	};
 };
 
 export type TranslationFunctions = {
@@ -730,6 +790,66 @@ export type TranslationFunctions = {
 		 * Également disponible dans cette marque
 		 */
 		sameCollection: () => LocalizedString;
+	};
+	account: {
+		auth: {
+			/**
+			 * Prénom
+			 */
+			firstName: () => LocalizedString;
+			/**
+			 * Nom
+			 */
+			lastName: () => LocalizedString;
+			/**
+			 * Adresse e-mail
+			 */
+			email: () => LocalizedString;
+			/**
+			 * Mot de passe
+			 */
+			password: () => LocalizedString;
+			/**
+			 * Créer un compte
+			 */
+			register: () => LocalizedString;
+			/**
+			 * Se connecter
+			 */
+			login: () => LocalizedString;
+			loginSection: {
+				/**
+				 * Mot de passe oublié ?
+				 */
+				forgotPassword: () => LocalizedString;
+				/**
+				 * Vous n’avez pas de compte ? Inscrivez-vous !
+				 */
+				noAccountTitle: () => LocalizedString;
+				/**
+				 * Vous souhaitez avoir votre paire unique personnalisée par des artistes de talent ? Alors rejoignez-nous !
+				 */
+				noAccountDescription: () => LocalizedString;
+				/**
+				 * Créer un compte
+				 */
+				register: () => LocalizedString;
+			};
+			registerSection: {
+				/**
+				 * Confirmer le mot de passe
+				 */
+				confirmPassword: () => LocalizedString;
+				/**
+				 * Vous avez déjà un compte ? Connectez-vous !
+				 */
+				alreadyAccountTitle: () => LocalizedString;
+				/**
+				 * Connectez-vous afin de retrouvez vos artistes, designs favoris ainsi que nos suggestions adaptées à votre profil !
+				 */
+				alreadyAccountDescription: () => LocalizedString;
+			};
+		};
 	};
 };
 
