@@ -2,6 +2,7 @@ import daisyui from 'daisyui';
 import type { Config } from 'tailwindcss';
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
 		extend: {}
 	},
@@ -12,7 +13,7 @@ export default {
 				light: {
 					primary: '#085852',
 
-					secondary: '#00ad9c',
+					secondary: '#ffffff',
 
 					accent: '#00d6bc',
 
@@ -31,7 +32,7 @@ export default {
 				dark: {
 					primary: '#085852',
 
-					secondary: '#00ad9c',
+					secondary: '#ffffff',
 
 					accent: '#00d6bc',
 
