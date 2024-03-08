@@ -11,6 +11,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
+  svelte-tel-input:
+    specifier: ^3.3.9
+    version: 3.3.9(svelte@4.2.9)
   sveltekit-medusa-client:
     specifier: ^3.1.2
     version: 3.1.2(svelte@4.2.9)
@@ -1623,6 +1626,10 @@ packages:
       type-check: 0.4.0
     dev: true
 
+  /libphonenumber-js@1.10.57:
+    resolution: {integrity: sha512-OjsEd9y4LgcX+Ig09SbxWqcGESxliDDFNVepFhB9KEsQZTrnk3UdEU+cO0sW1APvLprHstQpS23OQpZ3bwxy6Q==}
+    dev: false
+
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
@@ -2402,6 +2409,16 @@ packages:
       svelte: 4.2.9
       typescript: 5.3.3
     dev: true
+
+  /svelte-tel-input@3.3.9(svelte@4.2.9):
+    resolution: {integrity: sha512-OEYA5NsXbFemhdTcPbOmiC+jmNftfcwLaIVf7+LIJJefOfVZKXpuPuCFrBUgYMxOwdunV913WLW1a7CQbaAeCg==}
+    engines: {node: '>= 18', npm: '>= 8', pnpm: '>= 8', yarn: '>= 1'}
+    peerDependencies:
+      svelte: ^3.58.0 || ^4.0.0
+    dependencies:
+      libphonenumber-js: 1.10.57
+      svelte: 4.2.9
+    dev: false
 
   /svelte@4.2.9:
     resolution: {integrity: sha512-hsoB/WZGEPFXeRRLPhPrbRz67PhP6sqYgvwcAs+gWdSQSvNDw+/lTeUJSWe5h2xC97Fz/8QxAOqItwBzNJPU8w==}
