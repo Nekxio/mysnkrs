@@ -114,6 +114,7 @@ const en = {
 			firstName: 'First name',
 			lastName: 'Last name',
 			email: 'Email',
+			phoneNumber: 'Phone number',
 			password: 'Password',
 			register: 'Register',
 			login: 'Log in',
@@ -129,6 +130,24 @@ const en = {
 				alreadyAccountTitle: 'Already have an account? Log in!',
 				alreadyAccountDescription:
 					'Log in to find your favorite artists, designs and suggestions tailored to your profile!'
+			}
+		},
+		dashboard: {
+			title: 'Account',
+			orders: { title: 'Orders' },
+			addresses: { title: 'Addresses' },
+			logout: 'Log out',
+			hello: 'Hello',
+			signedInAs: 'Signed in as',
+			overview: 'Overview',
+			update: 'Update',
+			updateInProgress: 'Updating...',
+			updateCompleted: 'Updated',
+			error: 'An error occurred. Please try again.',
+			profile: {
+				title: 'Profile',
+				description:
+					'View and update your profile information, including your name, email, and phone number. You can also update your billing address, or change your password.'
 			}
 		}
 	}

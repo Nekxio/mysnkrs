@@ -389,6 +389,10 @@ type RootTranslation = {
 			 */
 			password: string;
 			/**
+			 * N​u​m​é​r​o​ ​d​e​ ​t​é​l​é​p​h​o​n​e
+			 */
+			phoneNumber: string;
+			/**
 			 * C​r​é​e​r​ ​u​n​ ​c​o​m​p​t​e
 			 */
 			register: string;
@@ -427,6 +431,66 @@ type RootTranslation = {
 				 * C​o​n​n​e​c​t​e​z​-​v​o​u​s​ ​a​f​i​n​ ​d​e​ ​r​e​t​r​o​u​v​e​z​ ​v​o​s​ ​a​r​t​i​s​t​e​s​,​ ​d​e​s​i​g​n​s​ ​f​a​v​o​r​i​s​ ​a​i​n​s​i​ ​q​u​e​ ​n​o​s​ ​s​u​g​g​e​s​t​i​o​n​s​ ​a​d​a​p​t​é​e​s​ ​à​ ​v​o​t​r​e​ ​p​r​o​f​i​l​ ​!
 				 */
 				alreadyAccountDescription: string;
+			};
+		};
+		dashboard: {
+			/**
+			 * M​o​n​ ​c​o​m​p​t​e
+			 */
+			title: string;
+			orders: {
+				/**
+				 * M​e​s​ ​c​o​m​m​a​n​d​e​s
+				 */
+				title: string;
+			};
+			addresses: {
+				/**
+				 * M​e​s​ ​a​d​r​e​s​s​e​s
+				 */
+				title: string;
+			};
+			/**
+			 * S​e​ ​d​é​c​o​n​n​e​c​t​e​r
+			 */
+			logout: string;
+			/**
+			 * B​o​n​j​o​u​r
+			 */
+			hello: string;
+			/**
+			 * C​o​n​n​e​c​t​é​ ​e​n​ ​t​a​n​t​ ​q​u​e
+			 */
+			signedInAs: string;
+			/**
+			 * A​p​e​r​ç​u
+			 */
+			overview: string;
+			/**
+			 * M​e​t​t​r​e​ ​à​ ​j​o​u​r
+			 */
+			update: string;
+			/**
+			 * M​i​s​ ​à​ ​j​o​u​r​.​.​.
+			 */
+			updateInProgress: string;
+			/**
+			 * P​r​o​f​i​l​ ​à​ ​j​o​u​r
+			 */
+			updateCompleted: string;
+			/**
+			 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​.​ ​V​e​u​i​l​l​e​z​ ​r​é​e​s​s​a​y​e​r​.
+			 */
+			error: string;
+			profile: {
+				/**
+				 * M​o​n​ ​p​r​o​f​i​l
+				 */
+				title: string;
+				/**
+				 * C​o​n​s​u​l​t​e​z​ ​e​t​ ​m​e​t​t​e​z​ ​à​ ​j​o​u​r​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​d​e​ ​v​o​t​r​e​ ​p​r​o​f​i​l​,​ ​n​o​t​a​m​m​e​n​t​ ​v​o​t​r​e​ ​n​o​m​,​ ​v​o​t​r​e​ ​a​d​r​e​s​s​e​ ​é​l​e​c​t​r​o​n​i​q​u​e​ ​e​t​ ​v​o​t​r​e​ ​n​u​m​é​r​o​ ​d​e​ ​t​é​l​é​p​h​o​n​e​.​ ​V​o​u​s​ ​p​o​u​v​e​z​ ​é​g​a​l​e​m​e​n​t​ ​m​e​t​t​r​e​ ​à​ ​j​o​u​r​ ​v​o​t​r​e​ ​a​d​r​e​s​s​e​ ​d​e​ ​f​a​c​t​u​r​a​t​i​o​n​ ​o​u​ ​m​o​d​i​f​i​e​r​ ​v​o​t​r​e​ ​m​o​t​ ​d​e​ ​p​a​s​s​e​.
+				 */
+				description: string;
 			};
 		};
 	};
@@ -810,6 +874,10 @@ export type TranslationFunctions = {
 			 */
 			password: () => LocalizedString;
 			/**
+			 * Numéro de téléphone
+			 */
+			phoneNumber: () => LocalizedString;
+			/**
 			 * Créer un compte
 			 */
 			register: () => LocalizedString;
@@ -848,6 +916,66 @@ export type TranslationFunctions = {
 				 * Connectez-vous afin de retrouvez vos artistes, designs favoris ainsi que nos suggestions adaptées à votre profil !
 				 */
 				alreadyAccountDescription: () => LocalizedString;
+			};
+		};
+		dashboard: {
+			/**
+			 * Mon compte
+			 */
+			title: () => LocalizedString;
+			orders: {
+				/**
+				 * Mes commandes
+				 */
+				title: () => LocalizedString;
+			};
+			addresses: {
+				/**
+				 * Mes adresses
+				 */
+				title: () => LocalizedString;
+			};
+			/**
+			 * Se déconnecter
+			 */
+			logout: () => LocalizedString;
+			/**
+			 * Bonjour
+			 */
+			hello: () => LocalizedString;
+			/**
+			 * Connecté en tant que
+			 */
+			signedInAs: () => LocalizedString;
+			/**
+			 * Aperçu
+			 */
+			overview: () => LocalizedString;
+			/**
+			 * Mettre à jour
+			 */
+			update: () => LocalizedString;
+			/**
+			 * Mis à jour...
+			 */
+			updateInProgress: () => LocalizedString;
+			/**
+			 * Profil à jour
+			 */
+			updateCompleted: () => LocalizedString;
+			/**
+			 * Une erreur est survenue. Veuillez réessayer.
+			 */
+			error: () => LocalizedString;
+			profile: {
+				/**
+				 * Mon profil
+				 */
+				title: () => LocalizedString;
+				/**
+				 * Consultez et mettez à jour les informations de votre profil, notamment votre nom, votre adresse électronique et votre numéro de téléphone. Vous pouvez également mettre à jour votre adresse de facturation ou modifier votre mot de passe.
+				 */
+				description: () => LocalizedString;
 			};
 		};
 	};
