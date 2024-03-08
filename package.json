@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@medusajs/types": "^1.11.11",
 		"dayjs": "^1.11.10",
+		"svelte-tel-input": "^3.3.9",
 		"sveltekit-medusa-client": "^3.1.2",
 		"swiper": "^11.0.5",
 		"typesafe-i18n": "^5.26.2"

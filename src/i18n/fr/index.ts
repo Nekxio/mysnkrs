@@ -121,6 +121,7 @@ const fr = {
 			lastName: 'Nom',
 			email: 'Adresse e-mail',
 			password: 'Mot de passe',
+			phoneNumber: 'Numéro de téléphone',
 			register: 'Créer un compte',
 			login: 'Se connecter',
 			loginSection: {
@@ -135,6 +136,24 @@ const fr = {
 				alreadyAccountTitle: 'Vous avez déjà un compte ? Connectez-vous !',
 				alreadyAccountDescription:
 					'Connectez-vous afin de retrouvez vos artistes, designs favoris ainsi que nos suggestions adaptées à votre profil !'
+			}
+		},
+		dashboard: {
+			title: 'Mon compte',
+			orders: { title: 'Mes commandes' },
+			addresses: { title: 'Mes adresses' },
+			logout: 'Se déconnecter',
+			hello: 'Bonjour',
+			signedInAs: 'Connecté en tant que',
+			overview: 'Aperçu',
+			update: 'Mettre à jour',
+			updateInProgress: 'Mis à jour...',
+			updateCompleted: 'Mis à jour',
+			error: 'Une erreur est survenue. Veuillez réessayer.',
+			profile: {
+				title: 'Mon profil',
+				description:
+					'Consultez et mettez à jour les informations de votre profil, notamment votre nom, votre adresse électronique et votre numéro de téléphone. Vous pouvez également mettre à jour votre adresse de facturation ou modifier votre mot de passe.'
 			}
 		}
 	}
