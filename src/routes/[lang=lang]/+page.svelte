@@ -7,7 +7,7 @@
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import BrandIcon from '$lib/components/icons/BrandIcon.svelte';
 	import type { PageData } from './$types';
-	import type { Product } from '../../types/product';
+	import type { Product } from '../../types/medusa';
 
 	export let data: PageData;
 	const products: Product[] = data.products as Product[];

@@ -1,6 +1,6 @@
 import medusa from '$lib/server/medusa';
 import type { PageServerLoad } from '../../../../../.svelte-kit/types/src/routes/[lang=lang]/$types';
-import type { Product } from '../../../../types/product';
+import type { Product } from '../../../../types/medusa';
 
 export const load: PageServerLoad = async ({
 	url,

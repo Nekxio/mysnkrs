@@ -2,13 +2,13 @@
 	import LL, { locale } from '$i18n/i18n-svelte';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
-	import type { Product } from '../../../../types/product';
 	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import TimeIcon from '$lib/components/icons/TimeIcon.svelte';
 	import InstalmentPayment from '$lib/components/icons/InstalmentPayment.svelte';
 	import ReturnIcon from '$lib/components/icons/ReturnIcon.svelte';
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
+	import type { Product } from '../../../../types/medusa';
 
 	export let data: PageData;
 	const product: Product | undefined = data.product;
