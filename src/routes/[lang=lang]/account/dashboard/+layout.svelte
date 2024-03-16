@@ -4,9 +4,9 @@
 </script>
 
 <div
-	class="min-h-screen flex flex-col lg:px-20 md:flex-row lg:justify-between space-y-6 lg:space-y-0 lg:space-x-20 lg:items-center"
+	class="h-screen flex flex-col lg:px-20 md:flex-row lg:justify-between space-y-6 lg:space-y-0 lg:space-x-20 lg:items-center"
 >
-	<aside>
+	<aside class="items-center flex">
 		<ul class="flex flex-row justify-between lg:flex-col lg:space-y-4 items-start">
 			<li>
 				<a href="{base}/{$locale}/account/dashboard/" class="btn btn-ghost text-left">
@@ -30,7 +30,7 @@
 			</li>
 		</ul>
 	</aside>
-	<div>
+	<div class="w-full">
 		<slot />
 	</div>
 </div>
