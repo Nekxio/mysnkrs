@@ -141,7 +141,6 @@ const fr = {
 		dashboard: {
 			title: 'Mon compte',
 			orders: { title: 'Mes commandes' },
-			addresses: { title: 'Mes adresses' },
 			logout: 'Se déconnecter',
 			hello: 'Bonjour',
 			signedInAs: 'Connecté en tant que',
@@ -149,11 +148,31 @@ const fr = {
 			update: 'Mettre à jour',
 			updateInProgress: 'Mis à jour...',
 			updateCompleted: 'Mis à jour',
+			add: 'Ajouter',
+			addInProgress: 'Ajout en cours...',
+			addCompleted: 'Ajouté',
 			error: 'Une erreur est survenue. Veuillez réessayer.',
+			search: 'Rechercher...',
+			selectCountry: 'Sélectionner un pays',
 			profile: {
 				title: 'Mon profil',
 				description:
 					'Consultez et mettez à jour les informations de votre profil, notamment votre nom, votre adresse électronique et votre numéro de téléphone. Vous pouvez également mettre à jour votre adresse de facturation ou modifier votre mot de passe.'
+			},
+			addresses: {
+				title: 'Mes adresses',
+				description:
+					"Affichez et mettez à jour vos adresses de livraison, vous pouvez en ajouter autant que vous le souhaitez. L'enregistrement de vos adresses les rendra disponibles lors du paiement.",
+				newAddress: 'Nouvelle adresse',
+				company: 'Société',
+				address: 'Adresse',
+				addressComplement: 'Complément d’adresse',
+				addressComplementPlaceholder: 'Appartement, suite, etc.',
+				postalCode: 'Code postal',
+				city: 'Ville',
+				province: 'Région / État',
+				country: 'Pays',
+				selectCountry: 'Sélectionner un pays'
 			}
 		}
 	}

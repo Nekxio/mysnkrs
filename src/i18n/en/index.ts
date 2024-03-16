@@ -135,7 +135,6 @@ const en = {
 		dashboard: {
 			title: 'Account',
 			orders: { title: 'Orders' },
-			addresses: { title: 'Addresses' },
 			logout: 'Log out',
 			hello: 'Hello',
 			signedInAs: 'Signed in as',
@@ -143,11 +142,31 @@ const en = {
 			update: 'Update',
 			updateInProgress: 'Updating...',
 			updateCompleted: 'Updated',
+			add: 'Add',
+			inProgress: 'Progressing ...',
+			addCompleted: 'Added',
 			error: 'An error occurred. Please try again.',
+			search: 'Search...',
+			selectCountry: 'Select a country',
 			profile: {
 				title: 'Profile',
 				description:
 					'View and update your profile information, including your name, email, and phone number. You can also update your billing address, or change your password.'
+			},
+			addresses: {
+				title: 'Addresses',
+				description:
+					'View and update your shipping addresses, you can add as many as you like. Saving your addresses will make them available during checkout.',
+				newAddress: 'New address',
+				company: 'Company',
+				address: 'Address',
+				addressComplement: 'Address complement',
+				addressComplementPlaceholder: 'Apartment, suite, etc.',
+				postalCode: 'Postal code',
+				city: 'City',
+				province: 'Province / State',
+				country: 'Country',
+				selectCountry: 'Select a country'
 			}
 		}
 	}

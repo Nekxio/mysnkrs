@@ -124,7 +124,7 @@
 					{/if}
 				</span>
 			{:else}
-				Select country
+				{$LL.account.dashboard.selectCountry()}
 			{/if}
 		</button>
 		{#if isOpen}
@@ -144,7 +144,7 @@
 						type="text"
 						class="p-4 bg-base-200 focus:outline-none w-full sticky top-0"
 						bind:value={searchText}
-						placeholder={searchPlaceholder}
+						placeholder={$LL.account.dashboard.search()}
 					/>
 					{#each sortCountries( normalizedCountries.filter( (country) => authorizedCountries.includes(country.iso2) ), searchText ) as country (country.id)}
 						{@const isActive = isSelected(country.iso2, selectedCountry)}
