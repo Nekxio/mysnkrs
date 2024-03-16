@@ -444,12 +444,6 @@ type RootTranslation = {
 				 */
 				title: string;
 			};
-			addresses: {
-				/**
-				 * M​e​s​ ​a​d​r​e​s​s​e​s
-				 */
-				title: string;
-			};
 			/**
 			 * S​e​ ​d​é​c​o​n​n​e​c​t​e​r
 			 */
@@ -475,13 +469,33 @@ type RootTranslation = {
 			 */
 			updateInProgress: string;
 			/**
-			 * P​r​o​f​i​l​ ​à​ ​j​o​u​r
+			 * M​i​s​ ​à​ ​j​o​u​r
 			 */
 			updateCompleted: string;
+			/**
+			 * A​j​o​u​t​e​r
+			 */
+			add: string;
+			/**
+			 * A​j​o​u​t​ ​e​n​ ​c​o​u​r​s​.​.​.
+			 */
+			addInProgress: string;
+			/**
+			 * A​j​o​u​t​é
+			 */
+			addCompleted: string;
 			/**
 			 * U​n​e​ ​e​r​r​e​u​r​ ​e​s​t​ ​s​u​r​v​e​n​u​e​.​ ​V​e​u​i​l​l​e​z​ ​r​é​e​s​s​a​y​e​r​.
 			 */
 			error: string;
+			/**
+			 * R​e​c​h​e​r​c​h​e​r​.​.​.
+			 */
+			search: string;
+			/**
+			 * S​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​ ​p​a​y​s
+			 */
+			selectCountry: string;
 			profile: {
 				/**
 				 * M​o​n​ ​p​r​o​f​i​l
@@ -491,6 +505,56 @@ type RootTranslation = {
 				 * C​o​n​s​u​l​t​e​z​ ​e​t​ ​m​e​t​t​e​z​ ​à​ ​j​o​u​r​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​d​e​ ​v​o​t​r​e​ ​p​r​o​f​i​l​,​ ​n​o​t​a​m​m​e​n​t​ ​v​o​t​r​e​ ​n​o​m​,​ ​v​o​t​r​e​ ​a​d​r​e​s​s​e​ ​é​l​e​c​t​r​o​n​i​q​u​e​ ​e​t​ ​v​o​t​r​e​ ​n​u​m​é​r​o​ ​d​e​ ​t​é​l​é​p​h​o​n​e​.​ ​V​o​u​s​ ​p​o​u​v​e​z​ ​é​g​a​l​e​m​e​n​t​ ​m​e​t​t​r​e​ ​à​ ​j​o​u​r​ ​v​o​t​r​e​ ​a​d​r​e​s​s​e​ ​d​e​ ​f​a​c​t​u​r​a​t​i​o​n​ ​o​u​ ​m​o​d​i​f​i​e​r​ ​v​o​t​r​e​ ​m​o​t​ ​d​e​ ​p​a​s​s​e​.
 				 */
 				description: string;
+			};
+			addresses: {
+				/**
+				 * M​e​s​ ​a​d​r​e​s​s​e​s
+				 */
+				title: string;
+				/**
+				 * A​f​f​i​c​h​e​z​ ​e​t​ ​m​e​t​t​e​z​ ​à​ ​j​o​u​r​ ​v​o​s​ ​a​d​r​e​s​s​e​s​ ​d​e​ ​l​i​v​r​a​i​s​o​n​,​ ​v​o​u​s​ ​p​o​u​v​e​z​ ​e​n​ ​a​j​o​u​t​e​r​ ​a​u​t​a​n​t​ ​q​u​e​ ​v​o​u​s​ ​l​e​ ​s​o​u​h​a​i​t​e​z​.​ ​L​'​e​n​r​e​g​i​s​t​r​e​m​e​n​t​ ​d​e​ ​v​o​s​ ​a​d​r​e​s​s​e​s​ ​l​e​s​ ​r​e​n​d​r​a​ ​d​i​s​p​o​n​i​b​l​e​s​ ​l​o​r​s​ ​d​u​ ​p​a​i​e​m​e​n​t​.
+				 */
+				description: string;
+				/**
+				 * N​o​u​v​e​l​l​e​ ​a​d​r​e​s​s​e
+				 */
+				newAddress: string;
+				/**
+				 * S​o​c​i​é​t​é
+				 */
+				company: string;
+				/**
+				 * A​d​r​e​s​s​e
+				 */
+				address: string;
+				/**
+				 * C​o​m​p​l​é​m​e​n​t​ ​d​’​a​d​r​e​s​s​e
+				 */
+				addressComplement: string;
+				/**
+				 * A​p​p​a​r​t​e​m​e​n​t​,​ ​s​u​i​t​e​,​ ​e​t​c​.
+				 */
+				addressComplementPlaceholder: string;
+				/**
+				 * C​o​d​e​ ​p​o​s​t​a​l
+				 */
+				postalCode: string;
+				/**
+				 * V​i​l​l​e
+				 */
+				city: string;
+				/**
+				 * R​é​g​i​o​n​ ​/​ ​É​t​a​t
+				 */
+				province: string;
+				/**
+				 * P​a​y​s
+				 */
+				country: string;
+				/**
+				 * S​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​ ​p​a​y​s
+				 */
+				selectCountry: string;
 			};
 		};
 	};
@@ -929,12 +993,6 @@ export type TranslationFunctions = {
 				 */
 				title: () => LocalizedString;
 			};
-			addresses: {
-				/**
-				 * Mes adresses
-				 */
-				title: () => LocalizedString;
-			};
 			/**
 			 * Se déconnecter
 			 */
@@ -960,13 +1018,33 @@ export type TranslationFunctions = {
 			 */
 			updateInProgress: () => LocalizedString;
 			/**
-			 * Profil à jour
+			 * Mis à jour
 			 */
 			updateCompleted: () => LocalizedString;
+			/**
+			 * Ajouter
+			 */
+			add: () => LocalizedString;
+			/**
+			 * Ajout en cours...
+			 */
+			addInProgress: () => LocalizedString;
+			/**
+			 * Ajouté
+			 */
+			addCompleted: () => LocalizedString;
 			/**
 			 * Une erreur est survenue. Veuillez réessayer.
 			 */
 			error: () => LocalizedString;
+			/**
+			 * Rechercher...
+			 */
+			search: () => LocalizedString;
+			/**
+			 * Sélectionner un pays
+			 */
+			selectCountry: () => LocalizedString;
 			profile: {
 				/**
 				 * Mon profil
@@ -976,6 +1054,56 @@ export type TranslationFunctions = {
 				 * Consultez et mettez à jour les informations de votre profil, notamment votre nom, votre adresse électronique et votre numéro de téléphone. Vous pouvez également mettre à jour votre adresse de facturation ou modifier votre mot de passe.
 				 */
 				description: () => LocalizedString;
+			};
+			addresses: {
+				/**
+				 * Mes adresses
+				 */
+				title: () => LocalizedString;
+				/**
+				 * Affichez et mettez à jour vos adresses de livraison, vous pouvez en ajouter autant que vous le souhaitez. L'enregistrement de vos adresses les rendra disponibles lors du paiement.
+				 */
+				description: () => LocalizedString;
+				/**
+				 * Nouvelle adresse
+				 */
+				newAddress: () => LocalizedString;
+				/**
+				 * Société
+				 */
+				company: () => LocalizedString;
+				/**
+				 * Adresse
+				 */
+				address: () => LocalizedString;
+				/**
+				 * Complément d’adresse
+				 */
+				addressComplement: () => LocalizedString;
+				/**
+				 * Appartement, suite, etc.
+				 */
+				addressComplementPlaceholder: () => LocalizedString;
+				/**
+				 * Code postal
+				 */
+				postalCode: () => LocalizedString;
+				/**
+				 * Ville
+				 */
+				city: () => LocalizedString;
+				/**
+				 * Région / État
+				 */
+				province: () => LocalizedString;
+				/**
+				 * Pays
+				 */
+				country: () => LocalizedString;
+				/**
+				 * Sélectionner un pays
+				 */
+				selectCountry: () => LocalizedString;
 			};
 		};
 	};

@@ -3,7 +3,7 @@
 	import type { ProductTagDTO } from '@medusajs/types';
 	import { base } from '$app/paths';
 	import { locale } from '$i18n/i18n-svelte';
-	import type { Product } from '../../../types/product';
+	import type { Product } from '../../../types/medusa';
 
 	export let product: Product;
 

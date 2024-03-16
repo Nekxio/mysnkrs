@@ -8,9 +8,9 @@
 	import ArrowLeftIcon from '$lib/components/icons/ArrowLeftIcon.svelte';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import ProductCard from '$lib/components/common/ProductCard.svelte';
-	import type { Product } from '../../../types/product';
 	import type { Review } from 'sveltekit-medusa-client';
 	import ReviewCard from '$lib/components/common/ReviewCard.svelte';
+	import type { Product } from '../../../types/medusa';
 
 	export let products: Product[] | undefined = [];
 	export let reviews: Review[] | undefined = [];

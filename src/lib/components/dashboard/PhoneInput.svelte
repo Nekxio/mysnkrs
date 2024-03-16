@@ -12,15 +12,13 @@
 	} from 'svelte-tel-input/types';
 	import 'svelte-tel-input/styles/flags.css';
 	import LL from '$i18n/i18n-svelte';
-	import { authorizedCountries } from '../../../constants';
-
+	import { authorizedCountries } from '$lib/constants';
 	export let phoneNumber: string | null | undefined;
 	let clickOutside = true;
 	let closeOnClick = true;
 	let disabled = false;
 	let detailedValue: DetailedValue | null = null;
-	let value: E164Number | null = phoneNumber || null;
-	let searchPlaceholder: string | null = 'Search';
+	let value: E164Number = phoneNumber || '';
 	let selectedCountry: CountryCode | null;
 	let valid: boolean;
 	let options: TelInputOptions;
@@ -28,6 +26,8 @@
 	let isOpen = false;
 
 	$: selectedCountryDialCode = normalizedCountries.find((el) => el.iso2 === selectedCountry)?.dialCode || null;
+	$: value == '' && (selectedCountry = 'FR');
+	console.log(value);
 	const toggleDropDown = (e?: Event) => {
 		e?.preventDefault();
 		if (disabled) return;
@@ -124,7 +124,7 @@
 					{/if}
 				</span>
 			{:else}
-				Select country
+				{$LL.account.dashboard.selectCountry()}
 			{/if}
 		</button>
 		{#if isOpen}
@@ -144,9 +144,9 @@
 						type="text"
 						class="p-4 bg-base-200 focus:outline-none w-full sticky top-0"
 						bind:value={searchText}
-						placeholder={searchPlaceholder}
+						placeholder={$LL.account.dashboard.search()}
 					/>
-					{#each sortCountries( normalizedCountries.filter( (country) => authorizedCountries.includes(country.iso2) ), searchText ) as country (country.id)}
+					{#each sortCountries( normalizedCountries.filter( (country) => authorizedCountries.some((authCountry) => authCountry.code === country.iso2) ), searchText ) as country (country.id)}
 						{@const isActive = isSelected(country.iso2, selectedCountry)}
 						<div id="country-{country.iso2}" role="option" aria-selected={isActive}>
 							<button
