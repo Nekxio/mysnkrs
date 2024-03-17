@@ -134,7 +134,6 @@ const en = {
 		},
 		dashboard: {
 			title: 'Account',
-			orders: { title: 'Orders' },
 			logout: 'Log out',
 			hello: 'Hello',
 			signedInAs: 'Signed in as',
@@ -167,6 +166,34 @@ const en = {
 				province: 'Province / State',
 				country: 'Country',
 				selectCountry: 'Select a country'
+			},
+			orders: {
+				title: 'Orders',
+				description:
+					'View your previous orders and their status. You can also create returns or exchanges for your orders if needed.',
+				emptyOrders: 'No orders yet',
+				emptyOrdersDescription: 'You have not placed any orders yet.',
+				continueShopping: 'Continue shopping',
+				items: 'item(s)',
+				seeDetails: 'See details',
+				more: 'more',
+				details: {
+					title: 'Order details',
+					emailConfirmation: 'We have sent the order confirmation details to',
+					orderNumber: 'Order number',
+					orderDate: 'Order date',
+					delivery: 'Delivery',
+					shippingAddress: 'Shipping address',
+					contact: 'Contact',
+					shippingMethod: 'Shipping method',
+					orderSummary: 'Order summary',
+					subtotal: 'Subtotal',
+					shipping: 'Shipping',
+					taxes: 'Taxes',
+					total: 'Total',
+					needHelp: 'Need help ?',
+					returnExchanges: 'Return & Exchanges'
+				}
 			}
 		}
 	}

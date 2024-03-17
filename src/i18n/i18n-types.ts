@@ -438,12 +438,6 @@ type RootTranslation = {
 			 * M​o​n​ ​c​o​m​p​t​e
 			 */
 			title: string;
-			orders: {
-				/**
-				 * M​e​s​ ​c​o​m​m​a​n​d​e​s
-				 */
-				title: string;
-			};
 			/**
 			 * S​e​ ​d​é​c​o​n​n​e​c​t​e​r
 			 */
@@ -555,6 +549,102 @@ type RootTranslation = {
 				 * S​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​ ​p​a​y​s
 				 */
 				selectCountry: string;
+			};
+			orders: {
+				/**
+				 * M​e​s​ ​c​o​m​m​a​n​d​e​s
+				 */
+				title: string;
+				/**
+				 * C​o​n​s​u​l​t​e​z​ ​v​o​s​ ​c​o​m​m​a​n​d​e​s​ ​p​r​é​c​é​d​e​n​t​e​s​ ​e​t​ ​l​e​u​r​ ​é​t​a​t​ ​d​'​a​v​a​n​c​e​m​e​n​t​.​ ​V​o​u​s​ ​p​o​u​v​e​z​ ​é​g​a​l​e​m​e​n​t​ ​c​r​é​e​r​ ​d​e​s​ ​r​e​t​o​u​r​s​ ​o​u​ ​d​e​s​ ​é​c​h​a​n​g​e​s​ ​p​o​u​r​ ​v​o​s​ ​c​o​m​m​a​n​d​e​s​ ​s​i​ ​n​é​c​e​s​s​a​i​r​e​.
+				 */
+				description: string;
+				/**
+				 * A​u​c​u​n​e​ ​c​o​m​m​a​n​d​e​ ​t​r​o​u​v​é​e
+				 */
+				emptyOrders: string;
+				/**
+				 * V​o​u​s​ ​n​’​a​v​e​z​ ​p​a​s​ ​e​n​c​o​r​e​ ​p​a​s​s​é​ ​d​e​ ​c​o​m​m​a​n​d​e​.
+				 */
+				emptyOrdersDescription: string;
+				/**
+				 * V​o​i​r​ ​t​o​u​s​ ​l​e​s​ ​p​r​o​d​u​i​t​s
+				 */
+				continueShopping: string;
+				/**
+				 * a​r​t​i​c​l​e​(​s​)
+				 */
+				items: string;
+				/**
+				 * V​o​i​r​ ​l​e​s​ ​d​é​t​a​i​l​s
+				 */
+				seeDetails: string;
+				/**
+				 * s​u​p​p​l​é​m​e​n​t​a​i​r​e​s
+				 */
+				more: string;
+				details: {
+					/**
+					 * D​é​t​a​i​l​s​ ​d​e​ ​l​a​ ​c​o​m​m​a​n​d​e
+					 */
+					title: string;
+					/**
+					 * N​o​u​s​ ​a​v​o​n​s​ ​e​n​v​o​y​é​ ​l​e​s​ ​d​é​t​a​i​l​s​ ​d​e​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​d​e​ ​c​o​m​m​a​n​d​e​ ​à
+					 */
+					emailConfirmation: string;
+					/**
+					 * N​u​m​é​r​o​ ​d​e​ ​c​o​m​m​a​n​d​e
+					 */
+					orderNumber: string;
+					/**
+					 * D​a​t​e​ ​d​e​ ​c​o​m​m​a​n​d​e
+					 */
+					orderDate: string;
+					/**
+					 * L​i​v​r​a​i​s​o​n
+					 */
+					delivery: string;
+					/**
+					 * A​d​r​e​s​s​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+					 */
+					shippingAddress: string;
+					/**
+					 * C​o​n​t​a​c​t
+					 */
+					contact: string;
+					/**
+					 * M​é​t​h​o​d​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+					 */
+					shippingMethod: string;
+					/**
+					 * R​é​s​u​m​é​ ​d​e​ ​l​a​ ​c​o​m​m​a​n​d​e
+					 */
+					orderSummary: string;
+					/**
+					 * S​o​u​s​-​t​o​t​a​l
+					 */
+					subtotal: string;
+					/**
+					 * L​i​v​r​a​i​s​o​n
+					 */
+					shipping: string;
+					/**
+					 * T​a​x​e​s
+					 */
+					taxes: string;
+					/**
+					 * T​o​t​a​l
+					 */
+					total: string;
+					/**
+					 * B​e​s​o​i​n​ ​d​'​a​i​d​e​ ​?
+					 */
+					needHelp: string;
+					/**
+					 * R​e​t​o​u​r​s​ ​&​ ​É​c​h​a​n​g​e​s
+					 */
+					returnExchanges: string;
+				};
 			};
 		};
 	};
@@ -987,12 +1077,6 @@ export type TranslationFunctions = {
 			 * Mon compte
 			 */
 			title: () => LocalizedString;
-			orders: {
-				/**
-				 * Mes commandes
-				 */
-				title: () => LocalizedString;
-			};
 			/**
 			 * Se déconnecter
 			 */
@@ -1104,6 +1188,102 @@ export type TranslationFunctions = {
 				 * Sélectionner un pays
 				 */
 				selectCountry: () => LocalizedString;
+			};
+			orders: {
+				/**
+				 * Mes commandes
+				 */
+				title: () => LocalizedString;
+				/**
+				 * Consultez vos commandes précédentes et leur état d'avancement. Vous pouvez également créer des retours ou des échanges pour vos commandes si nécessaire.
+				 */
+				description: () => LocalizedString;
+				/**
+				 * Aucune commande trouvée
+				 */
+				emptyOrders: () => LocalizedString;
+				/**
+				 * Vous n’avez pas encore passé de commande.
+				 */
+				emptyOrdersDescription: () => LocalizedString;
+				/**
+				 * Voir tous les produits
+				 */
+				continueShopping: () => LocalizedString;
+				/**
+				 * article(s)
+				 */
+				items: () => LocalizedString;
+				/**
+				 * Voir les détails
+				 */
+				seeDetails: () => LocalizedString;
+				/**
+				 * supplémentaires
+				 */
+				more: () => LocalizedString;
+				details: {
+					/**
+					 * Détails de la commande
+					 */
+					title: () => LocalizedString;
+					/**
+					 * Nous avons envoyé les détails de confirmation de commande à
+					 */
+					emailConfirmation: () => LocalizedString;
+					/**
+					 * Numéro de commande
+					 */
+					orderNumber: () => LocalizedString;
+					/**
+					 * Date de commande
+					 */
+					orderDate: () => LocalizedString;
+					/**
+					 * Livraison
+					 */
+					delivery: () => LocalizedString;
+					/**
+					 * Adresse de livraison
+					 */
+					shippingAddress: () => LocalizedString;
+					/**
+					 * Contact
+					 */
+					contact: () => LocalizedString;
+					/**
+					 * Méthode de livraison
+					 */
+					shippingMethod: () => LocalizedString;
+					/**
+					 * Résumé de la commande
+					 */
+					orderSummary: () => LocalizedString;
+					/**
+					 * Sous-total
+					 */
+					subtotal: () => LocalizedString;
+					/**
+					 * Livraison
+					 */
+					shipping: () => LocalizedString;
+					/**
+					 * Taxes
+					 */
+					taxes: () => LocalizedString;
+					/**
+					 * Total
+					 */
+					total: () => LocalizedString;
+					/**
+					 * Besoin d'aide ?
+					 */
+					needHelp: () => LocalizedString;
+					/**
+					 * Retours & Échanges
+					 */
+					returnExchanges: () => LocalizedString;
+				};
 			};
 		};
 	};

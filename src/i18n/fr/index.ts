@@ -140,7 +140,6 @@ const fr = {
 		},
 		dashboard: {
 			title: 'Mon compte',
-			orders: { title: 'Mes commandes' },
 			logout: 'Se déconnecter',
 			hello: 'Bonjour',
 			signedInAs: 'Connecté en tant que',
@@ -173,6 +172,34 @@ const fr = {
 				province: 'Région / État',
 				country: 'Pays',
 				selectCountry: 'Sélectionner un pays'
+			},
+			orders: {
+				title: 'Mes commandes',
+				description:
+					"Consultez vos commandes précédentes et leur état d'avancement. Vous pouvez également créer des retours ou des échanges pour vos commandes si nécessaire.",
+				emptyOrders: 'Aucune commande trouvée',
+				emptyOrdersDescription: 'Vous n’avez pas encore passé de commande.',
+				continueShopping: 'Voir tous les produits',
+				items: 'article(s)',
+				seeDetails: 'Voir les détails',
+				more: 'supplémentaires',
+				details: {
+					title: 'Détails de la commande',
+					emailConfirmation: 'Nous avons envoyé les détails de confirmation de commande à',
+					orderNumber: 'Numéro de commande',
+					orderDate: 'Date de commande',
+					delivery: 'Livraison',
+					shippingAddress: 'Adresse de livraison',
+					contact: 'Contact',
+					shippingMethod: 'Méthode de livraison',
+					orderSummary: 'Résumé de la commande',
+					subtotal: 'Sous-total',
+					shipping: 'Livraison',
+					taxes: 'Taxes',
+					total: 'Total',
+					needHelp: "Besoin d'aide ?",
+					returnExchanges: 'Retours & Échanges'
+				}
 			}
 		}
 	}
