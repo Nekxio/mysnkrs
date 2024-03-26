@@ -27,7 +27,6 @@
 
 	$: selectedCountryDialCode = normalizedCountries.find((el) => el.iso2 === selectedCountry)?.dialCode || null;
 	$: value == '' && (selectedCountry = 'FR');
-	console.log(value);
 	const toggleDropDown = (e?: Event) => {
 		e?.preventDefault();
 		if (disabled) return;
