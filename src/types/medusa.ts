@@ -1,4 +1,4 @@
-import type { MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
+import type { CartDTO, CartLineItemDTO, MoneyAmountDTO, ProductDTO, ProductVariantDTO } from '@medusajs/types';
 import type { Address, Customer } from 'sveltekit-medusa-client';
 export interface Product extends ProductDTO {
 	variants: ProductVariant[];
@@ -11,6 +11,14 @@ export interface ProductVariant extends ProductVariantDTO {
 export interface CustomerInfos extends Customer {
 	shipping_addresses: Address[];
 	orders: Order[];
+	cart: Cart;
+}
+
+export interface Cart extends CartDTO {
+	items: CartLineItem[];
+}
+export interface CartLineItem extends CartLineItemDTO {
+	variant: ProductVariant;
 }
 
 export interface AddressInfos extends Address {
