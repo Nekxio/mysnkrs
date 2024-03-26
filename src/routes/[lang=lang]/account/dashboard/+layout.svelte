@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="lg:h-screen flex flex-col lg:px-20 md:flex-row lg:justify-between space-y-6 lg:space-y-0 lg:space-x-20 lg:items-center"
+	class="lg:min-h-screen flex flex-col lg:px-20 lg:flex-row lg:justify-between space-y-6 lg:space-y-0 lg:space-x-20 items-center"
 >
 	<aside class="items-center flex">
 		<ul class="flex flex-row justify-between lg:flex-col lg:space-y-4 items-start">
