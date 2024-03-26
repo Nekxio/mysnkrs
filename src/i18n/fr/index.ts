@@ -153,6 +153,9 @@ const fr = {
 			error: 'Une erreur est survenue. Veuillez réessayer.',
 			search: 'Rechercher...',
 			selectCountry: 'Sélectionner un pays',
+			recentOrders: 'Dernières commandes',
+			completed: 'complété',
+			savedAddresses: 'enregistrées',
 			profile: {
 				title: 'Mon profil',
 				description:
@@ -202,6 +205,15 @@ const fr = {
 				}
 			}
 		}
+	},
+	cart: {
+		title: 'Mon panier',
+		summarize: 'Résumer de la commande',
+		placeOrder: 'Passer la commande',
+		exploreProducts: 'Explorer les produits',
+		cartEmpty:
+			'Votre panier est vide. Trouvons une paire qui vous convient, utilisez le lien ci-dessous pour commencer à parcourir nos produits.',
+		quantity: 'Quantité'
 	}
 } satisfies BaseTranslation;
 

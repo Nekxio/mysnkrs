@@ -147,6 +147,9 @@ const en = {
 			error: 'An error occurred. Please try again.',
 			search: 'Search...',
 			selectCountry: 'Select a country',
+			recentOrders: 'Recent orders',
+			completed: 'completed',
+			savedAddresses: 'saved',
 			profile: {
 				title: 'Profile',
 				description:
@@ -196,6 +199,15 @@ const en = {
 				}
 			}
 		}
+	},
+	cart: {
+		title: 'Cart',
+		summarize: 'Order summary',
+		placeOrder: 'Place order',
+		exploreProducts: 'Explore products',
+		cartEmpty:
+			"You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
+		quantity: 'Quantity'
 	}
 } satisfies BaseTranslation;
 
