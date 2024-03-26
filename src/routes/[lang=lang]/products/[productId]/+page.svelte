@@ -8,10 +8,9 @@
 	import ReturnIcon from '$lib/components/icons/ReturnIcon.svelte';
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
-	import type { Product } from '../../../../types/medusa';
 
 	export let data: PageData;
-	const product: Product | undefined = data.product;
+	const { product, popularProducts } = data;
 	let imageView: string | undefined = product?.images?.[0]?.url;
 
 	let price: number;
@@ -19,7 +18,6 @@
 		price = product.variants[0].prices[0].amount / 100;
 	}
 
-	const popularProducts: Product[] = data.popularProducts as Product[];
 	const changeImageView = (newImageView: string) => {
 		imageView = newImageView;
 	};
@@ -59,32 +57,34 @@
 				<h1 class="text-3xl font-bold text-primary">{product.title}</h1>
 				<h2 class="text-xl text-neutral">{product.collection.title}</h2>
 				<p class="text-2xl font-bold">{price} €</p>
-				{#if product.variants.length > 0}
-					<div class="form-control w-full max-w-xs">
-						<label for="sizeSelection" class="label">
-							<span class="text-xl text-primary">{$LL.productDetails.sizeSelection.title()}</span>
-						</label>
-						<select name="sizeSelection" class="select select-bordered">
-							<option disabled selected>-- {$LL.productDetails.sizeSelection.placeholder()} --</option>
-							{#each product.variants as variant}
-								<option
-									>{variant.title}
-									- {variant.inventory_quantity}
-									{$LL.productDetails.sizeSelection.available()}</option
-								>
-							{/each}
-						</select>
-					</div>
+				{#if product.variants.length}
+					<form action="?/addToCart" method="post" class="space-y-6">
+						<div class="form-control w-full max-w-xs">
+							<label for="variantSelection" class="label">
+								<span class="text-xl text-primary">{$LL.productDetails.sizeSelection.title()}</span>
+							</label>
+							<select name="variantSelection" class="select select-bordered">
+								<option disabled selected>-- {$LL.productDetails.sizeSelection.placeholder()} --</option>
+								{#each product.variants as variant}
+									<option value={variant.id}
+										>{variant.title}
+										- {variant.inventory_quantity}
+										{$LL.productDetails.sizeSelection.available()}</option
+									>
+								{/each}
+							</select>
+						</div>
+						<div class="flex flex-row flex-wrap my-4 gap-4">
+							<button type="submit" class="btn btn-primary rounded-full">
+								{$LL.productDetails.addToCart()}
+								<ShoppingCartIcon />
+							</button>
+							<button type="button" class="btn btn-circle btn-ghost">
+								<HeartIcon />
+							</button>
+						</div>
+					</form>
 				{/if}
-				<div class="flex flex-row flex-wrap my-4 gap-4">
-					<button type="button" class="btn btn-primary rounded-full">
-						{$LL.productDetails.addToCart()}
-						<ShoppingCartIcon />
-					</button>
-					<button type="button" class="btn btn-circle btn-ghost">
-						<HeartIcon />
-					</button>
-				</div>
 				<div class="flex flex-col gap-y-2">
 					<p class="text-sm">{$LL.productDetails.informations.seller()} : MySnkrz</p>
 					<div class="flex flex-row gap-x-2 font-bold text-sm">

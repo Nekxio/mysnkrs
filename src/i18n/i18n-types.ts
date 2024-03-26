@@ -490,6 +490,18 @@ type RootTranslation = {
 			 * S​é​l​e​c​t​i​o​n​n​e​r​ ​u​n​ ​p​a​y​s
 			 */
 			selectCountry: string;
+			/**
+			 * D​e​r​n​i​è​r​e​s​ ​c​o​m​m​a​n​d​e​s
+			 */
+			recentOrders: string;
+			/**
+			 * c​o​m​p​l​é​t​é
+			 */
+			completed: string;
+			/**
+			 * e​n​r​e​g​i​s​t​r​é​e​s
+			 */
+			savedAddresses: string;
 			profile: {
 				/**
 				 * M​o​n​ ​p​r​o​f​i​l
@@ -647,6 +659,32 @@ type RootTranslation = {
 				};
 			};
 		};
+	};
+	cart: {
+		/**
+		 * M​o​n​ ​p​a​n​i​e​r
+		 */
+		title: string;
+		/**
+		 * R​é​s​u​m​e​r​ ​d​e​ ​l​a​ ​c​o​m​m​a​n​d​e
+		 */
+		summarize: string;
+		/**
+		 * P​a​s​s​e​r​ ​l​a​ ​c​o​m​m​a​n​d​e
+		 */
+		placeOrder: string;
+		/**
+		 * E​x​p​l​o​r​e​r​ ​l​e​s​ ​p​r​o​d​u​i​t​s
+		 */
+		exploreProducts: string;
+		/**
+		 * V​o​t​r​e​ ​p​a​n​i​e​r​ ​e​s​t​ ​v​i​d​e​.​ ​T​r​o​u​v​o​n​s​ ​u​n​e​ ​p​a​i​r​e​ ​q​u​i​ ​v​o​u​s​ ​c​o​n​v​i​e​n​t​,​ ​u​t​i​l​i​s​e​z​ ​l​e​ ​l​i​e​n​ ​c​i​-​d​e​s​s​o​u​s​ ​p​o​u​r​ ​c​o​m​m​e​n​c​e​r​ ​à​ ​p​a​r​c​o​u​r​i​r​ ​n​o​s​ ​p​r​o​d​u​i​t​s​.
+		 */
+		cartEmpty: string;
+		/**
+		 * Q​u​a​n​t​i​t​é
+		 */
+		quantity: string;
 	};
 };
 
@@ -1129,6 +1167,18 @@ export type TranslationFunctions = {
 			 * Sélectionner un pays
 			 */
 			selectCountry: () => LocalizedString;
+			/**
+			 * Dernières commandes
+			 */
+			recentOrders: () => LocalizedString;
+			/**
+			 * complété
+			 */
+			completed: () => LocalizedString;
+			/**
+			 * enregistrées
+			 */
+			savedAddresses: () => LocalizedString;
 			profile: {
 				/**
 				 * Mon profil
@@ -1286,6 +1336,32 @@ export type TranslationFunctions = {
 				};
 			};
 		};
+	};
+	cart: {
+		/**
+		 * Mon panier
+		 */
+		title: () => LocalizedString;
+		/**
+		 * Résumer de la commande
+		 */
+		summarize: () => LocalizedString;
+		/**
+		 * Passer la commande
+		 */
+		placeOrder: () => LocalizedString;
+		/**
+		 * Explorer les produits
+		 */
+		exploreProducts: () => LocalizedString;
+		/**
+		 * Votre panier est vide. Trouvons une paire qui vous convient, utilisez le lien ci-dessous pour commencer à parcourir nos produits.
+		 */
+		cartEmpty: () => LocalizedString;
+		/**
+		 * Quantité
+		 */
+		quantity: () => LocalizedString;
 	};
 };
 

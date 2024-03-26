@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { assets, base } from '$app/paths';
-	import { locale, LL } from '$i18n/i18n-svelte';
+	import LL, { locale } from '$i18n/i18n-svelte';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
 	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import HamburgerIcon from '$lib/components/icons/HamburgerIcon.svelte';
 	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
-	import type { CustomerDTO } from '@medusajs/types';
+	import type { CustomerInfos } from '../../../types/medusa';
 
-	export let user: CustomerDTO | undefined;
+	export let user: CustomerInfos | undefined;
 </script>
 
 <header class="navbar sticky top-0 z-30 bg-base-100 p-4">
@@ -74,19 +74,25 @@
 					<HeartIcon />
 				</span>
 			</button>
+
 			<div class="dropdown dropdown-hover dropdown-end">
 				<div class="m-1 btn btn-ghost btn-circle">
 					<span class="indicator">
 						<ShoppingCartIcon />
-						<span class="badge indicator-item badge-sm badge-primary">8</span>
+						<span class="badge indicator-item badge-sm badge-primary">{user?.cart.items?.length || 0}</span>
 					</span>
 				</div>
 				<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
 					<div class="card-body">
-						<span class="text-lg font-bold text-base-content">8 Items</span>
-						<span class="text-base-content">Subtotal: $999</span>
+						<span class="text-lg font-bold text-base-content"
+							>{user?.cart.items?.length || 0} {$LL.account.dashboard.orders.items()}</span
+						>
+						<span class="text-base-content"
+							>{$LL.account.dashboard.orders.details.subtotal()}: {(user && (user.cart.subtotal / 100).toFixed(2)) || 0}
+							€</span
+						>
 						<div class="card-actions">
-							<button class="btn btn-primary btn-block">View cart</button>
+							<a href="{base}/{$locale}/cart" class="btn btn-primary btn-block">{$LL.header.cart()}</a>
 						</div>
 					</div>
 				</div>

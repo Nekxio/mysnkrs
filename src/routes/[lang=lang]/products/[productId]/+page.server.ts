@@ -1,4 +1,5 @@
 import medusa from '$lib/server/medusa';
+import { error, type Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from '../../../../../.svelte-kit/types/src/routes/[lang=lang]/$types';
 import type { Product } from '../../../../types/medusa';
 
@@ -14,4 +15,17 @@ export const load: PageServerLoad = async ({
 		product,
 		popularProducts
 	};
+};
+
+export const actions: Actions = {
+	addToCart: async ({ request, locals, cookies }) => {
+		const formData = await request.formData();
+		const productId: string = formData.get('variantSelection') as string;
+		try {
+			await medusa.addToCart(locals, cookies, productId, 1);
+		} catch (e) {
+			console.error(e);
+			throw error(501, 'Failed to update profile');
+		}
+	}
 };
