@@ -71,6 +71,10 @@ type RootTranslation = {
 		 * A​u​c​u​n​ ​r​é​s​u​l​t​a​t​ ​t​r​o​u​v​é
 		 */
 		emptyCarousel: string;
+		/**
+		 * R​é​s​u​l​t​a​t​s​ ​p​o​u​r
+		 */
+		searchResults: string;
 	};
 	header: {
 		/**
@@ -748,6 +752,10 @@ export type TranslationFunctions = {
 		 * Aucun résultat trouvé
 		 */
 		emptyCarousel: () => LocalizedString;
+		/**
+		 * Résultats pour
+		 */
+		searchResults: () => LocalizedString;
 	};
 	header: {
 		/**

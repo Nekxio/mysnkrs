@@ -1,11 +1,11 @@
 import medusa from '$lib/server/medusa';
-import type { Cart, CustomerInfos, Order } from '../types/medusa';
+import type { Cart, CustomerInfos, Order, Product } from '../types/medusa';
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async ({
 	locals,
 	cookies
-}): Promise<{ locale: string; user: CustomerInfos | undefined }> => {
+}): Promise<{ locale: string; user: CustomerInfos | undefined; products: Product[] }> => {
 	let user: CustomerInfos | undefined;
 	const userData = await medusa.getCustomer(locals, cookies);
 	if (userData) {
@@ -18,5 +18,7 @@ export const load: LayoutServerLoad = async ({
 		user = undefined;
 	}
 	const locale = locals.locale;
-	return { locale, user };
+	const products = (await medusa.getProducts()) as Product[];
+
+	return { locale, user, products };
 };

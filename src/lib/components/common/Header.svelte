@@ -2,12 +2,12 @@
 	import { assets, base } from '$app/paths';
 	import LL, { locale } from '$i18n/i18n-svelte';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
-	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import HamburgerIcon from '$lib/components/icons/HamburgerIcon.svelte';
 	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
 	import type { CustomerInfos } from '../../../types/medusa';
+	import SearchBar from '$lib/components/common/SearchBar.svelte';
 
 	export let user: CustomerInfos | undefined;
 </script>
@@ -53,15 +53,7 @@
 		</a>
 	</div>
 	<div class="navbar-center hidden lg:block">
-		<form class="flex w-full flex-row items-center rounded-full border-2 border-transparent bg-base-200 px-4 py-1">
-			<SearchIcon />
-			<input
-				id="headerSearch"
-				type="search"
-				placeholder={$LL.header.search()}
-				class="w-72 rounded-full border-none bg-base-200 p-1 outline-none"
-			/>
-		</form>
+		<SearchBar />
 	</div>
 	<div class="navbar-end gap-x-3">
 		<div class="hidden lg:flex">
@@ -79,16 +71,18 @@
 				<div class="m-1 btn btn-ghost btn-circle">
 					<span class="indicator">
 						<ShoppingCartIcon />
-						<span class="badge indicator-item badge-sm badge-primary">{user?.cart.items?.length || 0}</span>
+						<span class="badge indicator-item badge-sm badge-primary">{user?.cart?.items?.length || 0}</span>
 					</span>
 				</div>
 				<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
 					<div class="card-body">
 						<span class="text-lg font-bold text-base-content"
-							>{user?.cart.items?.length || 0} {$LL.account.dashboard.orders.items()}</span
+							>{user?.cart?.items?.length || 0} {$LL.account.dashboard.orders.items()}</span
 						>
 						<span class="text-base-content"
-							>{$LL.account.dashboard.orders.details.subtotal()}: {(user && (user.cart.subtotal / 100).toFixed(2)) || 0}
+							>{$LL.account.dashboard.orders.details.subtotal()}: {(user.cart &&
+								(user.cart.subtotal / 100).toFixed(2)) ||
+								0}
 							€</span
 						>
 						<div class="card-actions">

@@ -17,7 +17,8 @@ const en = {
 		availableModels: 'Available models',
 		emptyProduct: 'No product found',
 		emptyReviews: 'No review found',
-		emptyCarousel: 'No result found'
+		emptyCarousel: 'No result found',
+		searchResults: 'Results of'
 	},
 	header: {
 		artists: 'Artists',

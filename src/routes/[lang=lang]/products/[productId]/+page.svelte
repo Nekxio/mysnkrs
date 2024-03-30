@@ -10,7 +10,7 @@
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
 
 	export let data: PageData;
-	const { product, popularProducts } = data;
+	let { product, popularProducts } = data;
 	let imageView: string | undefined = product?.images?.[0]?.url;
 
 	let price: number;
@@ -21,6 +21,9 @@
 	const changeImageView = (newImageView: string) => {
 		imageView = newImageView;
 	};
+
+	$: product = data.product;
+	$: imageView = product?.images?.[0]?.url;
 </script>
 
 <svelte:head>
