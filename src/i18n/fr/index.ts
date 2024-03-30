@@ -17,7 +17,8 @@ const fr = {
 		availableModels: 'modèles disponibles',
 		emptyProduct: 'Aucun produit trouvé',
 		emptyReviews: 'Aucun produit trouvé',
-		emptyCarousel: 'Aucun résultat trouvé'
+		emptyCarousel: 'Aucun résultat trouvé',
+		searchResults: 'Résultats pour'
 	},
 	header: {
 		artists: 'Artistes',
