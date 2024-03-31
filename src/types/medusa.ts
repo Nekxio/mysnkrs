@@ -25,6 +25,11 @@ export interface AddressInfos extends Address {
 	id: string;
 }
 
+export interface Checkout {
+	shippingAddress: Address;
+	billingAddress: Address;
+}
+
 export interface OrderItem {
 	allow_discounts: boolean;
 	cart_id: string;

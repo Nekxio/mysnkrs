@@ -215,6 +215,17 @@ const fr = {
 		cartEmpty:
 			'Votre panier est vide. Trouvons une paire qui vous convient, utilisez le lien ci-dessous pour commencer à parcourir nos produits.',
 		quantity: 'Quantité'
+	},
+	checkout: {
+		address: {
+			title: 'Adresse de livraison',
+			chooseAddress: 'Choisissez une adresse',
+			differentBilling: 'Utiliser une adresse de facturation différente'
+		},
+		item: 'Article',
+		price: 'Prix',
+		previous: 'Précédent',
+		next: 'Suivant'
 	}
 } satisfies BaseTranslation;
 

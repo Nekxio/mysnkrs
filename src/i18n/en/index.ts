@@ -209,6 +209,17 @@ const en = {
 		cartEmpty:
 			"You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
 		quantity: 'Quantity'
+	},
+	checkout: {
+		address: {
+			title: 'Shipping address',
+			chooseAddress: 'Choose an address',
+			differentBilling: 'Use a different billing address'
+		},
+		item: 'Item',
+		price: 'Price',
+		previous: 'Previous',
+		next: 'Next'
 	}
 } satisfies BaseTranslation;
 

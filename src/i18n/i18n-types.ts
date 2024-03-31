@@ -690,6 +690,38 @@ type RootTranslation = {
 		 */
 		quantity: string;
 	};
+	checkout: {
+		address: {
+			/**
+			 * A​d​r​e​s​s​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+			 */
+			title: string;
+			/**
+			 * C​h​o​i​s​i​s​s​e​z​ ​u​n​e​ ​a​d​r​e​s​s​e
+			 */
+			chooseAddress: string;
+			/**
+			 * U​t​i​l​i​s​e​r​ ​u​n​e​ ​a​d​r​e​s​s​e​ ​d​e​ ​f​a​c​t​u​r​a​t​i​o​n​ ​d​i​f​f​é​r​e​n​t​e
+			 */
+			differentBilling: string;
+		};
+		/**
+		 * A​r​t​i​c​l​e
+		 */
+		item: string;
+		/**
+		 * P​r​i​x
+		 */
+		price: string;
+		/**
+		 * P​r​é​c​é​d​e​n​t
+		 */
+		previous: string;
+		/**
+		 * S​u​i​v​a​n​t
+		 */
+		next: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -1370,6 +1402,38 @@ export type TranslationFunctions = {
 		 * Quantité
 		 */
 		quantity: () => LocalizedString;
+	};
+	checkout: {
+		address: {
+			/**
+			 * Adresse de livraison
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Choisissez une adresse
+			 */
+			chooseAddress: () => LocalizedString;
+			/**
+			 * Utiliser une adresse de facturation différente
+			 */
+			differentBilling: () => LocalizedString;
+		};
+		/**
+		 * Article
+		 */
+		item: () => LocalizedString;
+		/**
+		 * Prix
+		 */
+		price: () => LocalizedString;
+		/**
+		 * Précédent
+		 */
+		previous: () => LocalizedString;
+		/**
+		 * Suivant
+		 */
+		next: () => LocalizedString;
 	};
 };
 
