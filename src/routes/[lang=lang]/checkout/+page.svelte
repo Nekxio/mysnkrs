@@ -1,10 +1,11 @@
 <script lang="ts">
-	import LL from '$i18n/i18n-svelte';
+	import LL, { locale } from '$i18n/i18n-svelte';
 	import { page } from '$app/stores';
 	import type { Cart, CustomerInfos } from '../../../types/medusa';
 	import type { Address } from 'sveltekit-medusa-client';
 	import { checkoutStore } from '../../../stores/checkoutStore';
 	import DashboardForm from '$lib/components/dashboard/DashboardForm.svelte';
+	import { base } from '$app/paths';
 
 	const user: CustomerInfos | undefined = $page.data.user || undefined;
 	let cart: Cart | undefined = user ? user.cart : undefined;
@@ -13,6 +14,7 @@
 	let isFormValid: boolean = false;
 	let billingAddress: Address | undefined = undefined;
 	let selectedAddress: Address | undefined = undefined;
+
 	function addAddressesToStore(shippingAddress: Address, billingAddress?: Address) {
 		selectedAddress = shippingAddress;
 		!useAnotherAddressForBilling &&
@@ -61,12 +63,12 @@
 
 <section>
 	<div class="flex flex-row justify-between min-h-[60vh] pt-6 gap-x-10">
-		<div class="space-y-6">
-			<div class="space-y-6 min-h-[50vh] transition-all ease-in-out duration-500" class:hidden={currentIndex !== 0}>
+		<div class="flex flex-col space-y-6 min-h-[50vh]">
+			<div class="space-y-6 transition-all h-full ease-in-out duration-500" class:hidden={currentIndex !== 0}>
 				<h2 class="text-3xl font-bold">{$LL.checkout.address.title()}</h2>
 				<p class="text-xl font-bold">{$LL.checkout.address.chooseAddress()}</p>
-				<div class="grid grid-cols-2 gap-6">
-					{#if user?.shipping_addresses && user?.shipping_addresses.length > 0}
+				{#if user?.shipping_addresses && user?.shipping_addresses.length > 0}
+					<div class="grid grid-cols-2 gap-6">
 						{#each user?.shipping_addresses as address}
 							<button
 								class="card border-neutral border text-left scale-95 transition-all ease-in-out duration-500 hover:scale-100"
@@ -103,24 +105,31 @@
 								</span>
 							</button>
 						{/each}
-					{/if}
-				</div>
-				<div class="w-fit">
-					<label class="cursor-pointer label">
-						<span class="label-text pr-4">{$LL.checkout.address.differentBilling()}</span>
-						<input type="checkbox" class="toggle toggle-primary" bind:checked={useAnotherAddressForBilling} />
-					</label>
-				</div>
-				<div class:hidden={!useAnotherAddressForBilling}>
-					<DashboardForm on:formValid={handleFormValid} on:formValues={handleFormValues} formType="billingAddress" />
-				</div>
+					</div>
+					<div class="w-fit">
+						<label class="cursor-pointer label">
+							<span class="label-text pr-4">{$LL.checkout.address.differentBilling()}</span>
+							<input type="checkbox" class="toggle toggle-primary" bind:checked={useAnotherAddressForBilling} />
+						</label>
+					</div>
+					<div class:hidden={!useAnotherAddressForBilling}>
+						<DashboardForm on:formValid={handleFormValid} on:formValues={handleFormValues} formType="billingAddress" />
+					</div>
+				{:else}
+					<div class="flex flex-col space-y-6">
+						<p>{$LL.checkout.address.noAddress()}</p>
+						<a href="{base}/{$locale}/account/dashboard/addresses/new" class="btn btn-primary"
+							>{$LL.checkout.address.addAddress()}</a
+						>
+					</div>
+				{/if}
 			</div>
 			<div class="min-h-[50vh] transition-all ease-in-out duration-500" class:hidden={currentIndex !== 1}>fgfgd</div>
 
-			<button class="btn btn-outline btn-primary" on:click={previous} class:hidden={currentIndex === 0}
+			<button class="btn btn-outline btn-primary w-fit" on:click={previous} class:hidden={currentIndex === 0}
 				>{$LL.checkout.previous()}</button
 			>
-			<button class="btn btn-primary" on:click={next}>{$LL.checkout.next()}</button>
+			<button class="btn btn-primary w-fit" on:click={next}>{$LL.checkout.next()}</button>
 		</div>
 		{#if cart}
 			<div class="lg:w-1/3 space-y-3">
