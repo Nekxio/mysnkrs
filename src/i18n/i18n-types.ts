@@ -704,6 +704,14 @@ type RootTranslation = {
 			 * U​t​i​l​i​s​e​r​ ​u​n​e​ ​a​d​r​e​s​s​e​ ​d​e​ ​f​a​c​t​u​r​a​t​i​o​n​ ​d​i​f​f​é​r​e​n​t​e
 			 */
 			differentBilling: string;
+			/**
+			 * A​u​c​u​n​e​ ​a​d​r​e​s​s​e​ ​e​n​r​e​g​i​s​t​r​é​e​ ​p​o​u​r​ ​l​e​ ​m​o​m​e​n​t​.
+			 */
+			noAddress: string;
+			/**
+			 * A​j​o​u​t​e​r​ ​u​n​e​ ​a​d​r​e​s​s​e
+			 */
+			addAddress: string;
 		};
 		/**
 		 * A​r​t​i​c​l​e
@@ -1417,6 +1425,14 @@ export type TranslationFunctions = {
 			 * Utiliser une adresse de facturation différente
 			 */
 			differentBilling: () => LocalizedString;
+			/**
+			 * Aucune adresse enregistrée pour le moment.
+			 */
+			noAddress: () => LocalizedString;
+			/**
+			 * Ajouter une adresse
+			 */
+			addAddress: () => LocalizedString;
 		};
 		/**
 		 * Article

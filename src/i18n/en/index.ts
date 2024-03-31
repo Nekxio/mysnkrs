@@ -214,7 +214,9 @@ const en = {
 		address: {
 			title: 'Shipping address',
 			chooseAddress: 'Choose an address',
-			differentBilling: 'Use a different billing address'
+			differentBilling: 'Use a different billing address',
+			noAddress: 'No address saved at the moment.',
+			addAddress: 'Add an address'
 		},
 		item: 'Item',
 		price: 'Price',

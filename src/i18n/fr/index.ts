@@ -220,7 +220,9 @@ const fr = {
 		address: {
 			title: 'Adresse de livraison',
 			chooseAddress: 'Choisissez une adresse',
-			differentBilling: 'Utiliser une adresse de facturation différente'
+			differentBilling: 'Utiliser une adresse de facturation différente',
+			noAddress: 'Aucune adresse enregistrée pour le moment.',
+			addAddress: 'Ajouter une adresse'
 		},
 		item: 'Article',
 		price: 'Prix',
