@@ -75,6 +75,14 @@ type RootTranslation = {
 		 * R​é​s​u​l​t​a​t​s​ ​p​o​u​r
 		 */
 		searchResults: string;
+		/**
+		 * S​u​i​v​a​n​t
+		 */
+		next: string;
+		/**
+		 * M​i​s​ ​à​ ​j​o​u​r​.​.​.
+		 */
+		updating: string;
 	};
 	header: {
 		/**
@@ -689,6 +697,10 @@ type RootTranslation = {
 		 * Q​u​a​n​t​i​t​é
 		 */
 		quantity: string;
+		/**
+		 * P​a​n​i​e​r​ ​m​i​s​ ​à​ ​j​o​u​r
+		 */
+		cartUpdated: string;
 	};
 	checkout: {
 		address: {
@@ -712,6 +724,28 @@ type RootTranslation = {
 			 * A​j​o​u​t​e​r​ ​u​n​e​ ​a​d​r​e​s​s​e
 			 */
 			addAddress: string;
+		};
+		shipping: {
+			/**
+			 * M​é​t​h​o​d​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+			 */
+			title: string;
+			/**
+			 * C​h​o​i​s​i​s​s​e​z​ ​u​n​e​ ​m​é​t​h​o​d​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+			 */
+			chooseMethod: string;
+			/**
+			 * A​u​c​u​n​e​ ​m​é​t​h​o​d​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n​ ​d​i​s​p​o​n​i​b​l​e​ ​p​o​u​r​ ​l​e​ ​m​o​m​e​n​t​.
+			 */
+			noMethod: string;
+			/**
+			 * L​i​v​r​é​ ​s​o​u​s​ ​7​ ​j​o​u​r​s​ ​o​u​v​r​é​s
+			 */
+			standard: string;
+			/**
+			 * L​i​v​r​é​ ​s​o​u​s​ ​2​ ​à​ ​3​ ​j​o​u​r​s​ ​o​u​v​r​é​s
+			 */
+			express: string;
 		};
 		/**
 		 * A​r​t​i​c​l​e
@@ -796,6 +830,14 @@ export type TranslationFunctions = {
 		 * Résultats pour
 		 */
 		searchResults: () => LocalizedString;
+		/**
+		 * Suivant
+		 */
+		next: () => LocalizedString;
+		/**
+		 * Mis à jour...
+		 */
+		updating: () => LocalizedString;
 	};
 	header: {
 		/**
@@ -1410,6 +1452,10 @@ export type TranslationFunctions = {
 		 * Quantité
 		 */
 		quantity: () => LocalizedString;
+		/**
+		 * Panier mis à jour
+		 */
+		cartUpdated: () => LocalizedString;
 	};
 	checkout: {
 		address: {
@@ -1433,6 +1479,28 @@ export type TranslationFunctions = {
 			 * Ajouter une adresse
 			 */
 			addAddress: () => LocalizedString;
+		};
+		shipping: {
+			/**
+			 * Méthode de livraison
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Choisissez une méthode de livraison
+			 */
+			chooseMethod: () => LocalizedString;
+			/**
+			 * Aucune méthode de livraison disponible pour le moment.
+			 */
+			noMethod: () => LocalizedString;
+			/**
+			 * Livré sous 7 jours ouvrés
+			 */
+			standard: () => LocalizedString;
+			/**
+			 * Livré sous 2 à 3 jours ouvrés
+			 */
+			express: () => LocalizedString;
 		};
 		/**
 		 * Article

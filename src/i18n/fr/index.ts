@@ -18,7 +18,9 @@ const fr = {
 		emptyProduct: 'Aucun produit trouvé',
 		emptyReviews: 'Aucun produit trouvé',
 		emptyCarousel: 'Aucun résultat trouvé',
-		searchResults: 'Résultats pour'
+		searchResults: 'Résultats pour',
+		next: 'Suivant',
+		updating: 'Mis à jour...'
 	},
 	header: {
 		artists: 'Artistes',
@@ -214,7 +216,8 @@ const fr = {
 		exploreProducts: 'Explorer les produits',
 		cartEmpty:
 			'Votre panier est vide. Trouvons une paire qui vous convient, utilisez le lien ci-dessous pour commencer à parcourir nos produits.',
-		quantity: 'Quantité'
+		quantity: 'Quantité',
+		cartUpdated: 'Panier mis à jour'
 	},
 	checkout: {
 		address: {
@@ -223,6 +226,13 @@ const fr = {
 			differentBilling: 'Utiliser une adresse de facturation différente',
 			noAddress: 'Aucune adresse enregistrée pour le moment.',
 			addAddress: 'Ajouter une adresse'
+		},
+		shipping: {
+			title: 'Méthode de livraison',
+			chooseMethod: 'Choisissez une méthode de livraison',
+			noMethod: 'Aucune méthode de livraison disponible pour le moment.',
+			standard: 'Livré sous 7 jours ouvrés',
+			express: 'Livré sous 2 à 3 jours ouvrés'
 		},
 		item: 'Article',
 		price: 'Prix',

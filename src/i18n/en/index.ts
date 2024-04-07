@@ -18,7 +18,9 @@ const en = {
 		emptyProduct: 'No product found',
 		emptyReviews: 'No review found',
 		emptyCarousel: 'No result found',
-		searchResults: 'Results of'
+		searchResults: 'Results of',
+		next: 'Next',
+		updating: 'Updating cart...'
 	},
 	header: {
 		artists: 'Artists',
@@ -208,7 +210,8 @@ const en = {
 		exploreProducts: 'Explore products',
 		cartEmpty:
 			"You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
-		quantity: 'Quantity'
+		quantity: 'Quantity',
+		cartUpdated: 'Cart updated'
 	},
 	checkout: {
 		address: {
@@ -217,6 +220,13 @@ const en = {
 			differentBilling: 'Use a different billing address',
 			noAddress: 'No address saved at the moment.',
 			addAddress: 'Add an address'
+		},
+		shipping: {
+			title: 'Shipping method',
+			chooseMethod: 'Choose a shipping method',
+			noMethod: 'No shipping method available at the moment.',
+			standard: 'Delivered within 7 working days',
+			express: 'Delivered within 2 to 3 working days'
 		},
 		item: 'Item',
 		price: 'Price',

@@ -181,6 +181,6 @@
 	/>
 </div>
 
-<label for="phone_number">
-	<input type="hidden" name="phone_number" bind:value />
+<label for="phone">
+	<input type="hidden" name="phone" bind:value />
 </label>
