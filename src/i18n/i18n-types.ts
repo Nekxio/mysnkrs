@@ -75,6 +75,14 @@ type RootTranslation = {
 		 * R​é​s​u​l​t​a​t​s​ ​p​o​u​r
 		 */
 		searchResults: string;
+		/**
+		 * S​u​i​v​a​n​t
+		 */
+		next: string;
+		/**
+		 * M​i​s​ ​à​ ​j​o​u​r​.​.​.
+		 */
+		updating: string;
 	};
 	header: {
 		/**
@@ -689,6 +697,10 @@ type RootTranslation = {
 		 * Q​u​a​n​t​i​t​é
 		 */
 		quantity: string;
+		/**
+		 * P​a​n​i​e​r​ ​m​i​s​ ​à​ ​j​o​u​r
+		 */
+		cartUpdated: string;
 	};
 	checkout: {
 		address: {
@@ -796,6 +808,14 @@ export type TranslationFunctions = {
 		 * Résultats pour
 		 */
 		searchResults: () => LocalizedString;
+		/**
+		 * Suivant
+		 */
+		next: () => LocalizedString;
+		/**
+		 * Mis à jour...
+		 */
+		updating: () => LocalizedString;
 	};
 	header: {
 		/**
@@ -1410,6 +1430,10 @@ export type TranslationFunctions = {
 		 * Quantité
 		 */
 		quantity: () => LocalizedString;
+		/**
+		 * Panier mis à jour
+		 */
+		cartUpdated: () => LocalizedString;
 	};
 	checkout: {
 		address: {

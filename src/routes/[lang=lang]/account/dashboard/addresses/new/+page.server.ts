@@ -10,12 +10,12 @@ export const actions: Actions = {
 		let response: Promise<Address>;
 
 		const address: Address = {
-			address_1: formData.get('address') as Address['address_1'],
-			address_2: formData.get('address_complement') as Address['address_2'],
+			address_1: formData.get('address_1') as Address['address_1'],
+			address_2: formData.get('address_2') as Address['address_2'],
 			city: formData.get('city') as Address['city'],
 			company: formData.get('company') as Address['company'],
-			country_code: formData.get('country') as Address['country_code'],
-			phone: formData.get('phone_number') as string,
+			country_code: formData.get('country_code') as Address['country_code'],
+			phone: formData.get('phone') as string,
 			postal_code: formData.get('postal_code') as Address['postal_code'],
 			province: formData.get('province') as Address['province'],
 			first_name: formData.get('first_name') as Address['first_name'],

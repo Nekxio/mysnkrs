@@ -18,7 +18,9 @@ const en = {
 		emptyProduct: 'No product found',
 		emptyReviews: 'No review found',
 		emptyCarousel: 'No result found',
-		searchResults: 'Results of'
+		searchResults: 'Results of',
+		next: 'Next',
+		updating: 'Updating cart...'
 	},
 	header: {
 		artists: 'Artists',
@@ -208,7 +210,8 @@ const en = {
 		exploreProducts: 'Explore products',
 		cartEmpty:
 			"You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
-		quantity: 'Quantity'
+		quantity: 'Quantity',
+		cartUpdated: 'Cart updated'
 	},
 	checkout: {
 		address: {

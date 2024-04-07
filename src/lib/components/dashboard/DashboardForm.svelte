@@ -176,7 +176,7 @@
 					<span class="label-text">{$LL.account.dashboard.addresses.address()}</span>
 				</label>
 				<input
-					name="address"
+					name="address_1"
 					type="text"
 					placeholder={$LL.account.dashboard.addresses.address()}
 					class="input input-bordered w-full"
@@ -189,7 +189,7 @@
 					<span class="label-text">{$LL.account.dashboard.addresses.addressComplement()}</span>
 				</label>
 				<input
-					name="address_complement"
+					name="address_2"
 					type="text"
 					placeholder={$LL.account.dashboard.addresses.addressComplementPlaceholder()}
 					class="input input-bordered w-full"
@@ -237,10 +237,10 @@
 				/>
 			</div>
 			<div class="w-full">
-				<label for="country" class="label">
+				<label for="country_code" class="label">
 					<span class="label-text">{$LL.account.dashboard.addresses.country()}</span>
 				</label>
-				<select class="select select-bordered w-full" name="country" bind:value={addressCountry} required>
+				<select class="select select-bordered w-full" name="country_code" bind:value={addressCountry} required>
 					<option value="" selected disabled>{$LL.account.dashboard.addresses.selectCountry()}</option>
 					{#each authorizedCountries as country}
 						<option value={country.code}>{country.name}</option>

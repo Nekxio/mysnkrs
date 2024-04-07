@@ -83,7 +83,7 @@
 				<p>{(cart.total / 100).toFixed(2)} €</p>
 			</div>
 			<div class="divider" />
-			<a href="{base}/{$locale}/checkout" class="btn btn-primary w-full">{$LL.cart.placeOrder()}</a>
+			<a href="{base}/{$locale}/checkout/addresses" class="btn btn-primary w-full">{$LL.cart.placeOrder()}</a>
 		</div>
 	{:else}
 		<div class="space-y-6 items-center flex flex-col">
