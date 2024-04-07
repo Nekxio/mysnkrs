@@ -747,6 +747,78 @@ type RootTranslation = {
 			 */
 			express: string;
 		};
+		payment: {
+			/**
+			 * P​a​i​e​m​e​n​t​ ​d​u​ ​p​a​n​i​e​r
+			 */
+			title: string;
+		};
+		confirmation: {
+			/**
+			 * C​o​n​f​i​r​m​a​t​i​o​n​ ​d​e​ ​c​o​m​m​a​n​d​e
+			 */
+			title: string;
+			/**
+			 * M​e​r​c​i​ ​p​o​u​r​ ​v​o​t​r​e​ ​c​o​m​m​a​n​d​e​ ​!
+			 */
+			thanks: string;
+			/**
+			 * N​o​u​s​ ​a​v​o​n​s​ ​e​n​v​o​y​é​ ​u​n​ ​e​-​m​a​i​l​ ​d​e​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​à
+			 */
+			confirmation: string;
+			/**
+			 * R​é​s​u​m​é​ ​d​e​ ​l​a​ ​c​o​m​m​a​n​d​e
+			 */
+			summary: string;
+			/**
+			 * N​u​m​é​r​o​ ​d​e​ ​c​o​m​m​a​n​d​e
+			 */
+			orderNumber: string;
+			/**
+			 * D​a​t​e​ ​d​e​ ​c​o​m​m​a​n​d​e
+			 */
+			orderDate: string;
+			/**
+			 * L​i​v​r​a​i​s​o​n
+			 */
+			delivery: string;
+			/**
+			 * A​d​r​e​s​s​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+			 */
+			shippingAddress: string;
+			/**
+			 * C​o​n​t​a​c​t
+			 */
+			contact: string;
+			/**
+			 * M​é​t​h​o​d​e​ ​d​e​ ​l​i​v​r​a​i​s​o​n
+			 */
+			shippingMethod: string;
+			/**
+			 * R​é​s​u​m​é​ ​d​e​ ​l​a​ ​c​o​m​m​a​n​d​e
+			 */
+			orderSummary: string;
+			/**
+			 * L​i​v​r​a​i​s​o​n
+			 */
+			shipping: string;
+			/**
+			 * T​a​x​e​s
+			 */
+			taxes: string;
+			/**
+			 * T​o​t​a​l
+			 */
+			total: string;
+			/**
+			 * B​e​s​o​i​n​ ​d​’​a​i​d​e​ ​?
+			 */
+			needHelp: string;
+			/**
+			 * R​e​t​o​u​r​s​ ​&​ ​É​c​h​a​n​g​e​s
+			 */
+			returnExchanges: string;
+		};
 		/**
 		 * A​r​t​i​c​l​e
 		 */
@@ -1501,6 +1573,78 @@ export type TranslationFunctions = {
 			 * Livré sous 2 à 3 jours ouvrés
 			 */
 			express: () => LocalizedString;
+		};
+		payment: {
+			/**
+			 * Paiement du panier
+			 */
+			title: () => LocalizedString;
+		};
+		confirmation: {
+			/**
+			 * Confirmation de commande
+			 */
+			title: () => LocalizedString;
+			/**
+			 * Merci pour votre commande !
+			 */
+			thanks: () => LocalizedString;
+			/**
+			 * Nous avons envoyé un e-mail de confirmation à
+			 */
+			confirmation: () => LocalizedString;
+			/**
+			 * Résumé de la commande
+			 */
+			summary: () => LocalizedString;
+			/**
+			 * Numéro de commande
+			 */
+			orderNumber: () => LocalizedString;
+			/**
+			 * Date de commande
+			 */
+			orderDate: () => LocalizedString;
+			/**
+			 * Livraison
+			 */
+			delivery: () => LocalizedString;
+			/**
+			 * Adresse de livraison
+			 */
+			shippingAddress: () => LocalizedString;
+			/**
+			 * Contact
+			 */
+			contact: () => LocalizedString;
+			/**
+			 * Méthode de livraison
+			 */
+			shippingMethod: () => LocalizedString;
+			/**
+			 * Résumé de la commande
+			 */
+			orderSummary: () => LocalizedString;
+			/**
+			 * Livraison
+			 */
+			shipping: () => LocalizedString;
+			/**
+			 * Taxes
+			 */
+			taxes: () => LocalizedString;
+			/**
+			 * Total
+			 */
+			total: () => LocalizedString;
+			/**
+			 * Besoin d’aide ?
+			 */
+			needHelp: () => LocalizedString;
+			/**
+			 * Retours & Échanges
+			 */
+			returnExchanges: () => LocalizedString;
 		};
 		/**
 		 * Article

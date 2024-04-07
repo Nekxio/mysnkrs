@@ -234,6 +234,27 @@ const fr = {
 			standard: 'Livré sous 7 jours ouvrés',
 			express: 'Livré sous 2 à 3 jours ouvrés'
 		},
+		payment: {
+			title: 'Paiement du panier'
+		},
+		confirmation: {
+			title: 'Confirmation de commande',
+			thanks: 'Merci pour votre commande !',
+			confirmation: 'Nous avons envoyé un e-mail de confirmation à',
+			summary: 'Résumé de la commande',
+			orderNumber: 'Numéro de commande',
+			orderDate: 'Date de commande',
+			delivery: 'Livraison',
+			shippingAddress: 'Adresse de livraison',
+			contact: 'Contact',
+			shippingMethod: 'Méthode de livraison',
+			orderSummary: 'Résumé de la commande',
+			shipping: 'Livraison',
+			taxes: 'Taxes',
+			total: 'Total',
+			needHelp: 'Besoin d’aide ?',
+			returnExchanges: 'Retours & Échanges'
+		},
 		item: 'Article',
 		price: 'Prix',
 		previous: 'Précédent',
