@@ -221,6 +221,13 @@ const en = {
 			noAddress: 'No address saved at the moment.',
 			addAddress: 'Add an address'
 		},
+		shipping: {
+			title: 'Shipping method',
+			chooseMethod: 'Choose a shipping method',
+			noMethod: 'No shipping method available at the moment.',
+			standard: 'Delivered within 7 working days',
+			express: 'Delivered within 2 to 3 working days'
+		},
 		item: 'Item',
 		price: 'Price',
 		previous: 'Previous',

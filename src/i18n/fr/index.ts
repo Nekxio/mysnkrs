@@ -227,6 +227,13 @@ const fr = {
 			noAddress: 'Aucune adresse enregistrée pour le moment.',
 			addAddress: 'Ajouter une adresse'
 		},
+		shipping: {
+			title: 'Méthode de livraison',
+			chooseMethod: 'Choisissez une méthode de livraison',
+			noMethod: 'Aucune méthode de livraison disponible pour le moment.',
+			standard: 'Livré sous 7 jours ouvrés',
+			express: 'Livré sous 2 à 3 jours ouvrés'
+		},
 		item: 'Article',
 		price: 'Prix',
 		previous: 'Précédent',
