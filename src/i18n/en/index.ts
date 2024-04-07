@@ -228,6 +228,28 @@ const en = {
 			standard: 'Delivered within 7 working days',
 			express: 'Delivered within 2 to 3 working days'
 		},
+		payment: {
+			title: 'Cart payment'
+		},
+		confirmation: {
+			title: 'Order confirmation',
+			thanks: 'Thank you for your order!',
+			confirmation: 'Your order has been placed and is being processed. You will receive a confirmation email shortly.',
+			summary: 'Order summary',
+			orderNumber: 'Order number',
+			orderDate: 'Order date',
+			delivery: 'Delivery',
+			shippingAddress: 'Shipping address',
+			contact: 'Contact',
+			shippingMethod: 'Shipping method',
+			orderSummary: 'Order summary',
+			subtotal: 'Subtotal',
+			shipping: 'Shipping',
+			taxes: 'Taxes',
+			total: 'Total',
+			needHelp: 'Need help ?',
+			returnExchanges: 'Return & Exchanges'
+		},
 		item: 'Item',
 		price: 'Price',
 		previous: 'Previous',
