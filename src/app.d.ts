@@ -1,3 +1,5 @@
+import type { Cart, CustomerInfos } from './types/medusa';
+
 type Locales = import('$i18n/i18n-types').Locales;
 type TranslationFunctions = import('$i18n/i18n-types').TranslationFun;
 
@@ -9,6 +11,10 @@ declare global {
 		interface Locals {
 			locale: Locales;
 			LL: TranslationFunctions;
+			sid: string;
+			cartid: string;
+			user: CustomerInfos | undefined;
+			cart: Cart;
 		}
 		// interface PageData {}
 		// interface Platform {}
