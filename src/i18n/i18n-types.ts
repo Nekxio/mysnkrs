@@ -138,9 +138,9 @@ type RootTranslation = {
 		 */
 		orders: string;
 		/**
-		 * P​a​r​a​m​è​t​r​e​s
+		 * M​e​s​ ​a​d​r​e​s​s​e​s
 		 */
-		settings: string;
+		addresses: string;
 	};
 	footer: {
 		/**
@@ -965,9 +965,9 @@ export type TranslationFunctions = {
 		 */
 		orders: () => LocalizedString;
 		/**
-		 * Paramètres
+		 * Mes adresses
 		 */
-		settings: () => LocalizedString;
+		addresses: () => LocalizedString;
 	};
 	footer: {
 		/**

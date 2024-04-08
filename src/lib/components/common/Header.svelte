@@ -104,7 +104,7 @@
 						<a href="{base}/{$locale}/orders">{$LL.header.orders()}</a>
 					</li>
 					<li>
-						<a href="{base}/{$locale}/settings">{$LL.header.settings()}</a>
+						<a href="{base}/{$locale}/account/dashboard/addresses">{$LL.header.addresses()}</a>
 					</li>
 					<li>
 						<a href="{base}/{$locale}/logout">{$LL.header.logout()}</a>

@@ -36,7 +36,7 @@ const fr = {
 		logout: 'Se déconnecter',
 		register: "S'inscrire",
 		orders: 'Mes commandes',
-		settings: 'Paramètres'
+		addresses: 'Mes adresses'
 	},
 	footer: {
 		artists: 'Les artistes',
