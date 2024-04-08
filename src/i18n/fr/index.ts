@@ -67,6 +67,8 @@ const fr = {
 		more: 'Voir tout'
 	},
 	home: {
+		videoSectionTitle: 'Bienvenue chez',
+		videoSectionSubtitle: 'Des artistes talentueux pour vous proposer des paires uniques et originales.',
 		featuredSectionTitle: 'Notre sélection du moment',
 		informations: {
 			firstTitle: 'Découvre des artistes talentueux',
