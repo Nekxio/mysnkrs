@@ -101,13 +101,13 @@
 						<a href="{base}/{$locale}/account" class="justify-between">{$LL.header.account()}</a>
 					</li>
 					<li>
-						<a href="{base}/{$locale}/orders">{$LL.header.orders()}</a>
+						<a href="{base}/{$locale}/account/dashboard/orders">{$LL.header.orders()}</a>
 					</li>
 					<li>
 						<a href="{base}/{$locale}/account/dashboard/addresses">{$LL.header.addresses()}</a>
 					</li>
 					<li>
-						<a href="{base}/{$locale}/logout">{$LL.header.logout()}</a>
+						<a href="{base}/{$locale}/account/logout">{$LL.header.logout()}</a>
 					</li>
 				</ul>
 			</div>
