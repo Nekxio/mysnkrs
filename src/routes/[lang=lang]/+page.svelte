@@ -1,8 +1,7 @@
 <script lang="ts">
-	import HomeCarousel from '$lib/components/carousel/HomeCarousel.svelte';
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
 	import LL, { locale } from '$i18n/i18n-svelte';
-	import { slides, items, artists, brands } from '../../data/example';
+	import { items, artists, brands } from '../../data/example';
 	import { assets, base } from '$app/paths';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import BrandIcon from '$lib/components/icons/BrandIcon.svelte';
@@ -17,7 +16,20 @@
 	<title>{`MySnkrs - ${$LL.pages.home()}` || 'MySnkrs'}</title>
 </svelte:head>
 
-<HomeCarousel {slides} />
+<section class="relative left-1/2 w-screen h-fit -translate-x-1/2 transform overflow-hidden">
+	<video class="w-full" autoplay muted loop>
+		<source src="https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+	<div class="absolute flex flex-col justify-center p-20 top-0 w-screen h-full backdrop-filter backdrop-blur-sm z-20">
+		<div class="w-1/2 space-y-4">
+			<p class="text-3xl font-bold uppercase">
+				{$LL.home.videoSectionTitle()} <span class="text-3xl font-bold uppercase text-primary">MySnkrs</span>
+			</p>
+			<p class="text-2xl font-bold text-white/80 uppercase text-wrap">{$LL.home.videoSectionSubtitle()}</p>
+		</div>
+	</div>
+</section>
 
 <Carousel {products} swiper="popularItems" sectionTitle={$LL.home.featuredSectionTitle()} />
 <section id="informations">
