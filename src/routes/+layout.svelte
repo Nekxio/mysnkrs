@@ -6,10 +6,12 @@
 	import Footer from '$lib/components/common/Footer.svelte';
 
 	export let data;
-	const { user } = data;
+
+	$: user = data?.user;
+	$: cart = data?.cart;
 </script>
 
-<Header {user} />
+<Header {user} {cart} />
 <main class="container mx-auto flex flex-col px-10 space-y-10 md:space-y-16 lg:px-0">
 	<slot />
 </main>

@@ -35,7 +35,7 @@ const en = {
 		login: 'Log in',
 		logout: 'Log out',
 		register: 'Register',
-		orders: 'My orders',
+		addresses: 'My addresses',
 		settings: 'Settings'
 	},
 	footer: {

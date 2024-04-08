@@ -4,17 +4,15 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/en';
 import 'dayjs/locale/fr';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';
-import { productsStore } from '../stores/productsStore';
-import type { CustomerInfos } from '../types/medusa';
+import type { Cart, CustomerInfos } from '../types/medusa';
 import type { LayoutLoad } from './$types';
 
 export const load: LayoutLoad<{ locale: Locales }> = async ({
-	data: { locale, user, products }
-}): Promise<{ locale: Locales; user: CustomerInfos | undefined }> => {
+	data: { locale, user, cart }
+}): Promise<{ locale: Locales; user: CustomerInfos | undefined; cart: Cart | undefined }> => {
 	const localeValue = locale as Locales;
 	await loadLocaleAsync(localeValue);
 	dayjs.extend(LocalizedFormat);
 	dayjs.locale(localeValue);
-	productsStore.set(products);
-	return { locale: localeValue, user };
+	return { locale: localeValue, user, cart };
 };
