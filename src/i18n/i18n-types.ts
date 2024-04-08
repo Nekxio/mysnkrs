@@ -244,6 +244,14 @@ type RootTranslation = {
 	};
 	home: {
 		/**
+		 * B​i​e​n​v​e​n​u​e​ ​c​h​e​z
+		 */
+		videoSectionTitle: string;
+		/**
+		 * D​e​s​ ​a​r​t​i​s​t​e​s​ ​t​a​l​e​n​t​u​e​u​x​ ​p​o​u​r​ ​v​o​u​s​ ​p​r​o​p​o​s​e​r​ ​d​e​s​ ​p​a​i​r​e​s​ ​u​n​i​q​u​e​s​ ​e​t​ ​o​r​i​g​i​n​a​l​e​s​.
+		 */
+		videoSectionSubtitle: string;
+		/**
 		 * N​o​t​r​e​ ​s​é​l​e​c​t​i​o​n​ ​d​u​ ​m​o​m​e​n​t
 		 */
 		featuredSectionTitle: string;
@@ -1070,6 +1078,14 @@ export type TranslationFunctions = {
 		more: () => LocalizedString;
 	};
 	home: {
+		/**
+		 * Bienvenue chez
+		 */
+		videoSectionTitle: () => LocalizedString;
+		/**
+		 * Des artistes talentueux pour vous proposer des paires uniques et originales.
+		 */
+		videoSectionSubtitle: () => LocalizedString;
 		/**
 		 * Notre sélection du moment
 		 */

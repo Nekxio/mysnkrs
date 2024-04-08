@@ -67,6 +67,9 @@ const en = {
 		more: 'More'
 	},
 	home: {
+		videoSectionTitle: 'Welcome to',
+		videoSectionSubtitle:
+			'Find the pair of sneakers that suits you, personalized by talented artists. Discover our selection of unique sneakers, created by our artists for you.',
 		featuredSectionTitle: 'Our current selection',
 		informations: {
 			firstTitle: 'Discover talented artists',
