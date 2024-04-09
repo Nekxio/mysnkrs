@@ -23,7 +23,7 @@
 	</video>
 	<div class="absolute flex flex-col justify-center p-20 top-0 w-screen h-full backdrop-filter backdrop-blur-sm z-20">
 		<div class="w-1/2 space-y-4">
-			<p class="text-3xl font-bold uppercase">
+			<p class="text-3xl text-white font-bold uppercase">
 				{$LL.home.videoSectionTitle()} <span class="text-3xl font-bold uppercase text-primary">MySnkrs</span>
 			</p>
 			<p class="text-2xl font-bold text-white/80 uppercase text-wrap">{$LL.home.videoSectionSubtitle()}</p>
