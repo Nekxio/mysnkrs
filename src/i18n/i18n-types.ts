@@ -22,6 +22,36 @@ type RootTranslation = {
 		 */
 		products: string;
 	};
+	cookies: {
+		/**
+		 * C​e​ ​s​i​t​e​ ​u​t​i​l​i​s​e​ ​d​e​s​ ​c​o​o​k​i​e​s
+		 */
+		title: string;
+		/**
+		 * N​o​u​s​ ​u​t​i​l​i​s​o​n​s​ ​d​e​s​ ​c​o​o​k​i​e​s​ ​p​o​u​r​ ​a​m​é​l​i​o​r​e​r​ ​v​o​t​r​e​ ​e​x​p​é​r​i​e​n​c​e​ ​s​u​r​ ​n​o​t​r​e​ ​s​i​t​e​ ​W​e​b​.​ ​E​n​ ​n​a​v​i​g​u​a​n​t​ ​s​u​r​ ​c​e​ ​s​i​t​e​,​ ​v​o​u​s​ ​a​c​c​e​p​t​e​z​ ​n​o​t​r​e​ ​u​t​i​l​i​s​a​t​i​o​n​ ​d​e​s​ ​c​o​o​k​i​e​s​.
+		 */
+		description: string;
+		/**
+		 * A​c​c​e​p​t​e​r
+		 */
+		acceptLabel: string;
+		/**
+		 * R​e​f​u​s​e​r
+		 */
+		rejectLabel: string;
+		/**
+		 * P​a​r​a​m​è​t​r​e​s​ ​d​e​s​ ​c​o​o​k​i​e​s
+		 */
+		settingsLabel: string;
+		/**
+		 * C​o​o​k​i​e​s​ ​n​é​c​e​s​s​a​i​r​e​s
+		 */
+		necessary: string;
+		/**
+		 * L​e​s​ ​c​o​o​k​i​e​s​ ​n​é​c​e​s​s​a​i​r​e​s​ ​p​e​r​m​e​t​t​e​n​t​ ​d​e​ ​r​e​n​d​r​e​ ​u​n​ ​s​i​t​e​ ​W​e​b​ ​u​t​i​l​i​s​a​b​l​e​ ​e​n​ ​a​c​t​i​v​a​n​t​ ​d​e​s​ ​f​o​n​c​t​i​o​n​s​ ​d​e​ ​b​a​s​e​ ​c​o​m​m​e​ ​l​a​ ​n​a​v​i​g​a​t​i​o​n​ ​d​e​ ​p​a​g​e​ ​e​t​ ​l​'​a​c​c​è​s​ ​a​u​x​ ​z​o​n​e​s​ ​s​é​c​u​r​i​s​é​e​s​ ​d​u​ ​s​i​t​e​ ​W​e​b​.​ ​L​e​ ​s​i​t​e​ ​W​e​b​ ​n​e​ ​p​e​u​t​ ​p​a​s​ ​f​o​n​c​t​i​o​n​n​e​r​ ​c​o​r​r​e​c​t​e​m​e​n​t​ ​s​a​n​s​ ​c​e​s​ ​c​o​o​k​i​e​s​.
+		 */
+		necessaryDescription: string;
+	};
 	common: {
 		/**
 		 * c​r​é​a​t​i​o​n
@@ -856,6 +886,36 @@ export type TranslationFunctions = {
 		 * Produits
 		 */
 		products: () => LocalizedString;
+	};
+	cookies: {
+		/**
+		 * Ce site utilise des cookies
+		 */
+		title: () => LocalizedString;
+		/**
+		 * Nous utilisons des cookies pour améliorer votre expérience sur notre site Web. En naviguant sur ce site, vous acceptez notre utilisation des cookies.
+		 */
+		description: () => LocalizedString;
+		/**
+		 * Accepter
+		 */
+		acceptLabel: () => LocalizedString;
+		/**
+		 * Refuser
+		 */
+		rejectLabel: () => LocalizedString;
+		/**
+		 * Paramètres des cookies
+		 */
+		settingsLabel: () => LocalizedString;
+		/**
+		 * Cookies nécessaires
+		 */
+		necessary: () => LocalizedString;
+		/**
+		 * Les cookies nécessaires permettent de rendre un site Web utilisable en activant des fonctions de base comme la navigation de page et l'accès aux zones sécurisées du site Web. Le site Web ne peut pas fonctionner correctement sans ces cookies.
+		 */
+		necessaryDescription: () => LocalizedString;
 	};
 	common: {
 		/**

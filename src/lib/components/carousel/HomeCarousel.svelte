@@ -80,12 +80,12 @@
 					</div>
 				{/each}
 			</div>
-			<div class="swiper-home-prev absolute top-44 left-4 z-50 hidden lg:flex">
+			<div class="swiper-home-prev absolute top-44 left-4 hidden lg:flex">
 				<div class="btn btn-circle hover:btn-primary">
 					<ArrowLeftIcon />
 				</div>
 			</div>
-			<div class="swiper-home-next absolute top-44 right-4 z-50 hidden lg:flex">
+			<div class="swiper-home-next absolute top-44 right-4 hidden lg:flex">
 				<div class="btn btn-circle hover:btn-primary">
 					<ArrowRightIcon />
 				</div>

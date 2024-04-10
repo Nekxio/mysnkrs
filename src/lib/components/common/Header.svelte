@@ -13,7 +13,7 @@
 	export let cart: Cart | undefined;
 </script>
 
-<header class="navbar sticky top-0 z-30 bg-base-100 p-4">
+<header class="navbar sticky top-0 z-50 bg-base-100 p-4">
 	<div class="navbar-start">
 		<div class="dropdown lg:hidden">
 			<div tabindex="0" role="button" class="m-1 btn btn-ghost">

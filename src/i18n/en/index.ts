@@ -5,6 +5,16 @@ const en = {
 		home: 'Home',
 		products: 'Products'
 	},
+	cookies: {
+		title: 'This site uses cookies',
+		description:
+			'We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies.',
+		acceptLabel: 'Accept',
+		settingsLabel: 'Cookie settings',
+		necessary: 'Necessary cookies',
+		necessaryDescription:
+			'Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.'
+	},
 	common: {
 		creation: 'creation',
 		creations: 'creations',
