@@ -5,6 +5,17 @@ const fr = {
 		home: 'Accueil',
 		products: 'Produits'
 	},
+	cookies: {
+		title: 'Ce site utilise des cookies',
+		description:
+			'Nous utilisons des cookies pour améliorer votre expérience sur notre site Web. En naviguant sur ce site, vous acceptez notre utilisation des cookies.',
+		acceptLabel: 'Accepter',
+		rejectLabel: 'Refuser',
+		settingsLabel: 'Paramètres des cookies',
+		necessary: 'Cookies nécessaires',
+		necessaryDescription:
+			"Les cookies nécessaires permettent de rendre un site Web utilisable en activant des fonctions de base comme la navigation de page et l'accès aux zones sécurisées du site Web. Le site Web ne peut pas fonctionner correctement sans ces cookies."
+	},
 	common: {
 		creation: 'création',
 		creations: 'créations',
