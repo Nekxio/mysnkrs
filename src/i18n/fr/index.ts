@@ -3,7 +3,9 @@ import type { BaseTranslation } from '../i18n-types.js';
 const fr = {
 	pages: {
 		home: 'Accueil',
-		products: 'Produits'
+		products: 'Produits',
+		artists: 'Artistes',
+		contact: 'Contact'
 	},
 	cookies: {
 		title: 'Ce site utilise des cookies',
@@ -282,6 +284,16 @@ const fr = {
 			"William Cruze est un artiste dévoué spécialisé dans la création et la personnalisation de baskets. Son approche unique de la conception de sneakers le distingue dans l'industrie. La passion de Cruze pour le mélange de l'art et des chaussures transparaît dans ses créations. Il est connu pour son souci du détail et ses designs innovants qui captivent les amateurs de sneakers du monde entier.",
 		creations: 'créations',
 		discoverArtist: "Découvrir l'artiste"
+	},
+	contact: {
+		title: 'Contacter le support',
+		help: 'Comment pouvons-nous vous aider ?',
+		option1: 'Commande',
+		optionOther: 'Autre',
+		orderId: 'Numéro de commande',
+		message: 'Message',
+		addFile: 'Deposer une piece jointe',
+		consent: "En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées pour me recontacter"
 	}
 } satisfies BaseTranslation;
 

@@ -21,6 +21,14 @@ type RootTranslation = {
 		 * P​r​o​d​u​i​t​s
 		 */
 		products: string;
+		/**
+		 * A​r​t​i​s​t​e​s
+		 */
+		artists: string;
+		/**
+		 * C​o​n​t​a​c​t
+		 */
+		contact: string;
 	};
 	cookies: {
 		/**
@@ -900,6 +908,40 @@ type RootTranslation = {
 		 */
 		discoverArtist: string;
 	};
+	contact: {
+		/**
+		 * C​o​n​t​a​c​t​e​r​ ​l​e​ ​s​u​p​p​o​r​t
+		 */
+		title: string;
+		/**
+		 * C​o​m​m​e​n​t​ ​p​o​u​v​o​n​s​-​n​o​u​s​ ​v​o​u​s​ ​a​i​d​e​r​ ​?
+		 */
+		help: string;
+		/**
+		 * C​o​m​m​a​n​d​e
+		 */
+		option1: string;
+		/**
+		 * A​u​t​r​e
+		 */
+		optionOther: string;
+		/**
+		 * N​u​m​é​r​o​ ​d​e​ ​c​o​m​m​a​n​d​e
+		 */
+		orderId: string;
+		/**
+		 * M​e​s​s​a​g​e
+		 */
+		message: string;
+		/**
+		 * D​e​p​o​s​e​r​ ​u​n​e​ ​p​i​e​c​e​ ​j​o​i​n​t​e
+		 */
+		addFile: string;
+		/**
+		 * E​n​ ​s​o​u​m​e​t​t​a​n​t​ ​c​e​ ​f​o​r​m​u​l​a​i​r​e​,​ ​j​'​a​c​c​e​p​t​e​ ​q​u​e​ ​l​e​s​ ​i​n​f​o​r​m​a​t​i​o​n​s​ ​s​a​i​s​i​e​s​ ​s​o​i​e​n​t​ ​u​t​i​l​i​s​é​e​s​ ​p​o​u​r​ ​m​e​ ​r​e​c​o​n​t​a​c​t​e​r
+		 */
+		consent: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -912,6 +954,14 @@ export type TranslationFunctions = {
 		 * Produits
 		 */
 		products: () => LocalizedString;
+		/**
+		 * Artistes
+		 */
+		artists: () => LocalizedString;
+		/**
+		 * Contact
+		 */
+		contact: () => LocalizedString;
 	};
 	cookies: {
 		/**
@@ -1790,6 +1840,40 @@ export type TranslationFunctions = {
 		 * Découvrir l'artiste
 		 */
 		discoverArtist: () => LocalizedString;
+	};
+	contact: {
+		/**
+		 * Contacter le support
+		 */
+		title: () => LocalizedString;
+		/**
+		 * Comment pouvons-nous vous aider ?
+		 */
+		help: () => LocalizedString;
+		/**
+		 * Commande
+		 */
+		option1: () => LocalizedString;
+		/**
+		 * Autre
+		 */
+		optionOther: () => LocalizedString;
+		/**
+		 * Numéro de commande
+		 */
+		orderId: () => LocalizedString;
+		/**
+		 * Message
+		 */
+		message: () => LocalizedString;
+		/**
+		 * Deposer une piece jointe
+		 */
+		addFile: () => LocalizedString;
+		/**
+		 * En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées pour me recontacter
+		 */
+		consent: () => LocalizedString;
 	};
 };
 

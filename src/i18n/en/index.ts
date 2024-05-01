@@ -3,7 +3,9 @@ import type { BaseTranslation } from '../i18n-types';
 const en = {
 	pages: {
 		home: 'Home',
-		products: 'Products'
+		products: 'Products',
+		artists: 'Artists',
+		contact: 'Contact'
 	},
 	cookies: {
 		title: 'This site uses cookies',
@@ -277,6 +279,16 @@ const en = {
 			"William Cruze is a dedicated artist specializing in the creation and customization of sneakers. His unique approach to sneaker design sets him apart in the industry. Cruze's passion for blending art and footwear shines through in his designs. He is known for his attention to detail and innovative designs that captivate sneaker lovers around the world.",
 		creations: 'creations',
 		discoverArtist: 'Discover the artist'
+	},
+	contact: {
+		title: 'Contact our support team',
+		help: 'How can we help you ?',
+		option1: 'Order',
+		optionOther: 'Other',
+		orderId: 'Order ID',
+		message: 'Message',
+		addFile: 'Add a file',
+		consent: 'By submitting this form, I agree that the information entered will be used to contact me again'
 	}
 } satisfies BaseTranslation;
 
