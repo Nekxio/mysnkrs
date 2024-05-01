@@ -30,7 +30,7 @@ export default {
 					error: '#FA3F19'
 				},
 				dark: {
-					primary: '#085852',
+					primary: '#5cb7ac',
 
 					secondary: '#ffffff',
 

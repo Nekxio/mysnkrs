@@ -40,7 +40,7 @@
 
 <svelte:window on:popstate={handlePopStateEvent} />
 
-<div class="dropdown dropdown-hover hidden lg:flex">
+<div class="dropdown dropdown-hover">
 	<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
 		<GlobeIcon />
 	</div>

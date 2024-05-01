@@ -18,7 +18,7 @@
 
 <section class="relative left-1/2 w-screen h-fit -translate-x-1/2 transform overflow-hidden">
 	<video class="w-full" autoplay muted loop>
-		<source src="https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" />
+		<source src="https://videos.pexels.com/video-files/8519683/8519683-uhd_4096_1680_25fps.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 	<div class="absolute flex flex-col justify-center p-20 top-0 w-screen h-full backdrop-filter backdrop-blur-sm z-20">

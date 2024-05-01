@@ -50,5 +50,11 @@ export const actions: Actions = {
 		if (await response) {
 			redirect(301, `${base}/${params.lang}/account/dashboard/addresses`);
 		}
+	},
+	search: async ({ url, request, locals }) => {
+		const formData = await request.formData();
+		const query = formData.get('query');
+
+		redirect(303, `${url.origin}/${locals.locale}/search?query=${query}`);
 	}
 };

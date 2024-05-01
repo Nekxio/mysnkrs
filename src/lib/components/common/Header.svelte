@@ -8,6 +8,7 @@
 	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
 	import type { Cart, CustomerInfos } from '../../../types/medusa';
 	import SearchBar from '$lib/components/common/SearchBar.svelte';
+	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
 
 	export let user: CustomerInfos | undefined;
 	export let cart: Cart | undefined;
@@ -30,6 +31,12 @@
 					<a href="{base}/{$locale}/contact">{$LL.header.contact()}</a>
 				</li>
 			</ul>
+		</div>
+		<div class="lg:hidden">
+			<LocaleSwitcher />
+		</div>
+		<div class="lg:hidden">
+			<ThemeSwitcher />
 		</div>
 		<a href="{base}/{$locale}" class="btn btn-ghost hidden lg:flex">
 			<img src="{assets}/images/logo_mysnkrs.svg" alt="MySnkrs logo" class="h-full" />
@@ -57,10 +64,16 @@
 		<SearchBar />
 	</div>
 	<div class="navbar-end gap-x-3">
+		<a href="{base}/{$locale}/search" class="btn btn-circle btn-ghost lg:hidden">
+			<SearchIcon />
+		</a>
+
 		<div class="hidden lg:flex">
 			<ThemeSwitcher />
 		</div>
-		<LocaleSwitcher />
+		<div class="hidden lg:flex">
+			<LocaleSwitcher />
+		</div>
 		{#if user}
 			<button class="btn btn-circle btn-ghost hidden lg:flex">
 				<span class="indicator">
