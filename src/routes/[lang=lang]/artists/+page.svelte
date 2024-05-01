@@ -9,7 +9,7 @@
 	<div id="breadcrumbs" class="text-sm breadcrumbs mb-8">
 		<ul>
 			<li><a href="{base}/{$locale}">{$LL.pages.home()}</a></li>
-			<li><a href="{base}/{$locale}/artists">{$LL.pages.products()}</a></li>
+			<li><a href="{base}/{$locale}/artists">{$LL.pages.artists()}</a></li>
 		</ul>
 	</div>
 	<div class="flex max-lg:flex-col justify-between items-center gap-12 lg:gap-20">
@@ -21,7 +21,6 @@
 			{$LL.artists.subtitle()}
 		</p>
 	</div>
-	<div></div>
 </section>
 <section class="hero">
 	<div class="hero-content lg:gap-20 flex-col lg:flex-row">
