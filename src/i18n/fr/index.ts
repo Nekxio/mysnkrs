@@ -272,6 +272,16 @@ const fr = {
 		price: 'Prix',
 		previous: 'Précédent',
 		next: 'Suivant'
+	},
+	artists: {
+		title1: 'Découvrez nos artistes',
+		title2: 'leur style et leurs univers',
+		subtitle:
+			"Plongez dans un monde créatif où le talent et l'originalité se rencontrent. Nos artistes talentueux apportent leur touche unique à chaque paire de sneakers, transformant de simples chaussures en véritables œuvres d'art. Du street art vibrant aux illustrations manga détaillées, en passant par les portraits réalistes inspirés du cinéma, chaque artiste possède son propre style distinctif.",
+		artistDescription:
+			"William Cruze est un artiste dévoué spécialisé dans la création et la personnalisation de baskets. Son approche unique de la conception de sneakers le distingue dans l'industrie. La passion de Cruze pour le mélange de l'art et des chaussures transparaît dans ses créations. Il est connu pour son souci du détail et ses designs innovants qui captivent les amateurs de sneakers du monde entier.",
+		creations: 'créations',
+		discoverArtist: "Découvrir l'artiste"
 	}
 } satisfies BaseTranslation;
 
