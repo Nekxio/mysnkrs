@@ -48,5 +48,11 @@ export const actions: Actions = {
 		} else {
 			throw error(401, 'Failed to login');
 		}
+	},
+	search: async ({ url, request, locals }) => {
+		const formData = await request.formData();
+		const query = formData.get('query');
+
+		redirect(303, `${url.origin}/${locals.locale}/search?query=${query}`);
 	}
 } satisfies Actions;

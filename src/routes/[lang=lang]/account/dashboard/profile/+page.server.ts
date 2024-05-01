@@ -1,5 +1,5 @@
 import medusa from '$lib/server/medusa';
-import { error } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import type { Customer } from 'sveltekit-medusa-client';
 import type { Actions, PageServerLoad } from './$types';
 
@@ -27,5 +27,11 @@ export const actions: Actions = {
 			console.error(e);
 			throw error(501, 'Failed to update profile');
 		}
+	},
+	search: async ({ url, request, locals }) => {
+		const formData = await request.formData();
+		const query = formData.get('query');
+
+		redirect(303, `${url.origin}/${locals.locale}/search?query=${query}`);
 	}
 };
