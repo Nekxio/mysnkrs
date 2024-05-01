@@ -18,7 +18,10 @@ export type SneakersArtist = {
 	id: number;
 	name: string;
 	picture: string;
-	creations: number;
+	nbSneakers: number;
+	nbFollowers: number;
+	averageReviews: number;
+	tags: string[];
 };
 
 export type SneakersComment = {

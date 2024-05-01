@@ -1,60 +1,79 @@
-import dayjs from 'dayjs';
-import type { HomeCarousel } from '../types/carousel';
-import type { Sneakers, SneakersArtist, SneakersBrand, SneakersCategory, SneakersComment } from '../types/sneakers';
-
-export const slides: HomeCarousel[] = [
-	{
-		imageSrc: 'https://picsum.photos/seed/1/800/400',
-		title: 'Slide 1',
-		description: 'Description 1'
-	},
-	{
-		imageSrc: 'https://picsum.photos/seed/2/800/400',
-		title: 'Slide 2',
-		description: 'Description 2'
-	},
-	{
-		imageSrc: 'https://picsum.photos/seed/3/800/400',
-		title: 'Slide 3',
-		description: 'Description 3'
-	},
-	{
-		imageSrc: 'https://picsum.photos/seed/4/800/400',
-		title: 'Slide 4',
-		description: 'Description 4'
-	},
-	{
-		imageSrc: 'https://picsum.photos/seed/5/800/400',
-		title: 'Slide 5',
-		description: 'Description 5'
-	}
-];
+import type { SneakersArtist, SneakersBrand } from '../types/sneakers';
 export const artists: SneakersArtist[] = [
 	{
 		id: 1,
-		name: 'John Doe',
-		picture: 'https://picsum.photos/seed/2/400/400',
-		creations: 1
+		name: 'Alex Novak',
+		picture: 'artist2.jpg',
+		nbSneakers: 5,
+		nbFollowers: 850,
+		averageReviews: 4.7,
+		tags: ['Street Art', 'Pop Art', 'Comics']
 	},
 	{
 		id: 2,
-		name: 'Jane Doe',
-		picture: 'https://picsum.photos/seed/2/400/400',
-		creations: 10
+		name: 'Emily Russo',
+		picture: 'artist1.jpg',
+		nbSneakers: 3,
+		nbFollowers: 620,
+		averageReviews: 4.5,
+		tags: ['Abstract', 'Colorful', 'Expressionism']
 	},
 	{
 		id: 3,
-		name: 'John Doe',
-		picture: 'https://picsum.photos/seed/3/400/400',
-		creations: 10
+		name: 'Max Delaney',
+		picture: 'artist3.jpg',
+		nbSneakers: 7,
+		nbFollowers: 980,
+		averageReviews: 4.9,
+		tags: ['Realistic', 'Movie', 'Portraits']
 	},
 	{
 		id: 4,
-		name: 'Jane Doe',
-		picture: 'https://picsum.photos/seed/4/400/400',
-		creations: 10
+		name: 'Sophia Laurent',
+		picture: 'artist7.jpg',
+		nbSneakers: 4,
+		nbFollowers: 720,
+		averageReviews: 4.6,
+		tags: ['Anime', 'Manga', 'Black and White']
+	},
+	{
+		id: 5,
+		name: 'Oliver Sinclair',
+		picture: 'artist5.jpg',
+		nbSneakers: 6,
+		nbFollowers: 910,
+		averageReviews: 4.8,
+		tags: ['Geometric', 'Minimalist', 'Abstract']
+	},
+	{
+		id: 6,
+		name: 'Luna Morales',
+		picture: 'artist6.jpg',
+		nbSneakers: 2,
+		nbFollowers: 580,
+		averageReviews: 4.4,
+		tags: ['Watercolor', 'Nature', 'Soft']
+	},
+	{
+		id: 7,
+		name: 'Ethan Hartman',
+		picture: 'artist4.jpg',
+		nbSneakers: 5,
+		nbFollowers: 800,
+		averageReviews: 4.6,
+		tags: ['Street Art', 'Graffiti', 'Urban']
+	},
+	{
+		id: 8,
+		name: 'Mia Wells',
+		picture: 'artist8.jpg',
+		nbSneakers: 3,
+		nbFollowers: 670,
+		averageReviews: 4.7,
+		tags: ['Calligraphy', 'Typography', 'Minimalist']
 	}
 ];
+
 export const brands: SneakersBrand[] = [
 	{
 		id: 1,
@@ -66,146 +85,42 @@ export const brands: SneakersBrand[] = [
 	},
 	{
 		id: 3,
-		name: 'vans'
-	},
-	{
-		id: 4,
 		name: 'converse'
 	},
 	{
-		id: 6,
-		name: 'jordan'
-	}
-];
-
-export const categories: SneakersCategory[] = [
-	{
-		id: 1,
-		name: 'street',
-		picture: 'https://picsum.photos/seed/1/400/400'
-	},
-	{
-		id: 2,
-		name: 'originals',
-		picture: 'https://picsum.photos/seed/1/400/400'
-	},
-	{
-		id: 3,
-		name: 'sport',
-		picture: 'https://picsum.photos/seed/1/400/400'
-	}
-];
-
-export const comments: SneakersComment[] = [
-	{
-		userName: 'John Doe',
-		date: dayjs().toDate(),
-		picture: 'https://picsum.photos/seed/1/400/400',
-		comment:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel libero sed urna ultrices facilisis. Sed euismod, nisl nec tincidunt aliquam, velit velit dignissim odio, vel tincidunt nulla nisi nec nisi. Sed nec semper elit, eget aliquam nisl. Nullam et elit vitae nulla tincidunt tincidunt. Donec euismod, tellus quis aliquet aliquam, nisi nisl lacinia nunc, nec egestas velit nunc quis velit. Nulla facilisi.',
-		stars: 4
-	},
-	{
-		userName: 'Jane Doe',
-		date: dayjs().toDate(),
-		picture: 'https://picsum.photos/seed/2/400/400',
-		comment:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel libero sed urna ultrices facilisis. Sed euismod, nisl nec tincidunt aliquam, velit velit dignissim odio, vel tincidunt nulla nisi nec nisi. Sed nec semper elit, eget aliquam nisl. Nullam et elit vitae nulla tincidunt tincidunt. Donec euismod, tellus quis aliquet aliquam, nisi nisl lacinia nunc, nec egestas velit nunc quis velit. Nulla facilisi.',
-		stars: 5
-	},
-	{
-		userName: 'John Doe',
-		date: dayjs().toDate(),
-		picture: 'https://picsum.photos/seed/3/400/400',
-		comment:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel libero sed urna ultrices facilisis. Sed euismod, nisl nec tincidunt aliquam, velit velit dignissim odio, vel tincidunt nulla nisi nec nisi. Sed nec semper elit, eget aliquam nisl. Nullam et elit vitae nulla tincidunt tincidunt. Donec euismod, tellus quis aliquet aliquam, nisi nisl lacinia nunc, nec egestas velit nunc quis velit. Nulla facilisi.',
-		stars: 3
-	}
-];
-
-export const items: Sneakers[] = [
-	{
-		id: 1,
-		name: 'Nike Air Max 90',
-		price: 100,
-		image: 'https://picsum.photos/seed/1/400/200',
-		size: 42,
-		artist: artists[0],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[0],
-		comments: [comments[2], comments[1]]
-	},
-	{
-		id: 2,
-		name: 'Nike Air',
-		price: 90,
-		image: 'https://picsum.photos/seed/2/400/200',
-		size: 42,
-		artist: artists[1],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[1],
-		comments: [comments[2], comments[0]]
-	},
-	{
-		id: 3,
-		name: 'Nike Air Max',
-		price: 120,
-		image: 'https://picsum.photos/seed/3/400/200',
-		size: 42,
-		artist: artists[2],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[2],
-		comments: comments[1]
-	},
-	{
 		id: 4,
-		name: 'Nike Air Max 90',
-		price: 100,
-		image: 'https://picsum.photos/seed/4/400/200',
-		size: 42,
-		artist: artists[3],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[2],
-		comments: comments[2]
+		name: 'vans'
 	},
 	{
 		id: 5,
-		name: 'Nike Air Max 90',
-		price: 100,
-		image: 'https://picsum.photos/seed/5/400/200',
-		size: 42,
-		artist: artists[2],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[2],
-		comments: comments[2]
+		name: 'jordan'
 	},
 	{
 		id: 6,
-		name: 'Nike Air Max 90',
-		price: 100,
-		image: 'https://picsum.photos/seed/6/400/200',
-		size: 42,
-		artist: artists[0],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[2],
-		comments: comments[1]
+		name: 'reebok'
 	},
 	{
 		id: 7,
-		name: 'Nike Air Max 90',
-		price: 100,
-		image: 'https://picsum.photos/seed/7/400/200',
-		size: 42,
-		artist: artists[2],
-		brand: 'Nike',
-		color: 'Black',
-		category: categories[2],
-		comments: comments[0]
+		name: 'new balance'
+	},
+	{
+		id: 8,
+		name: 'asics'
+	},
+	{
+		id: 9,
+		name: 'skechers'
+	},
+	{
+		id: 10,
+		name: 'under armour'
+	},
+	{
+		id: 11,
+		name: 'fila'
+	},
+	{
+		id: 12,
+		name: 'saucony'
 	}
 ];
