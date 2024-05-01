@@ -22,7 +22,7 @@
 			</div>
 			<ul class="dropdown-content menu z-[1] p-2 shadow bg-base-200 rounded-box w-52">
 				<li>
-					<a href="{base}/{$locale}/sneakers">{$LL.header.sneakers()}</a>
+					<a href="{base}/{$locale}/products">{$LL.header.sneakers()}</a>
 				</li>
 				<li>
 					<a href="{base}/{$locale}/artists">{$LL.header.artists()}</a>
@@ -44,7 +44,7 @@
 		<nav class="menu hidden lg:flex">
 			<ul class="menu-horizontal">
 				<li>
-					<a href="{base}/{$locale}/sneakers">{$LL.header.sneakers()}</a>
+					<a href="{base}/{$locale}/products">{$LL.header.sneakers()}</a>
 				</li>
 				<li>
 					<a href="{base}/{$locale}/artists">{$LL.header.artists()}</a>

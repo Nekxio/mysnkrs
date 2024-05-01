@@ -874,6 +874,32 @@ type RootTranslation = {
 		 */
 		next: string;
 	};
+	artists: {
+		/**
+		 * D​é​c​o​u​v​r​e​z​ ​n​o​s​ ​a​r​t​i​s​t​e​s
+		 */
+		title1: string;
+		/**
+		 * l​e​u​r​ ​s​t​y​l​e​ ​e​t​ ​l​e​u​r​s​ ​u​n​i​v​e​r​s
+		 */
+		title2: string;
+		/**
+		 * P​l​o​n​g​e​z​ ​d​a​n​s​ ​u​n​ ​m​o​n​d​e​ ​c​r​é​a​t​i​f​ ​o​ù​ ​l​e​ ​t​a​l​e​n​t​ ​e​t​ ​l​'​o​r​i​g​i​n​a​l​i​t​é​ ​s​e​ ​r​e​n​c​o​n​t​r​e​n​t​.​ ​N​o​s​ ​a​r​t​i​s​t​e​s​ ​t​a​l​e​n​t​u​e​u​x​ ​a​p​p​o​r​t​e​n​t​ ​l​e​u​r​ ​t​o​u​c​h​e​ ​u​n​i​q​u​e​ ​à​ ​c​h​a​q​u​e​ ​p​a​i​r​e​ ​d​e​ ​s​n​e​a​k​e​r​s​,​ ​t​r​a​n​s​f​o​r​m​a​n​t​ ​d​e​ ​s​i​m​p​l​e​s​ ​c​h​a​u​s​s​u​r​e​s​ ​e​n​ ​v​é​r​i​t​a​b​l​e​s​ ​œ​u​v​r​e​s​ ​d​'​a​r​t​.​ ​D​u​ ​s​t​r​e​e​t​ ​a​r​t​ ​v​i​b​r​a​n​t​ ​a​u​x​ ​i​l​l​u​s​t​r​a​t​i​o​n​s​ ​m​a​n​g​a​ ​d​é​t​a​i​l​l​é​e​s​,​ ​e​n​ ​p​a​s​s​a​n​t​ ​p​a​r​ ​l​e​s​ ​p​o​r​t​r​a​i​t​s​ ​r​é​a​l​i​s​t​e​s​ ​i​n​s​p​i​r​é​s​ ​d​u​ ​c​i​n​é​m​a​,​ ​c​h​a​q​u​e​ ​a​r​t​i​s​t​e​ ​p​o​s​s​è​d​e​ ​s​o​n​ ​p​r​o​p​r​e​ ​s​t​y​l​e​ ​d​i​s​t​i​n​c​t​i​f​.
+		 */
+		subtitle: string;
+		/**
+		 * W​i​l​l​i​a​m​ ​C​r​u​z​e​ ​e​s​t​ ​u​n​ ​a​r​t​i​s​t​e​ ​d​é​v​o​u​é​ ​s​p​é​c​i​a​l​i​s​é​ ​d​a​n​s​ ​l​a​ ​c​r​é​a​t​i​o​n​ ​e​t​ ​l​a​ ​p​e​r​s​o​n​n​a​l​i​s​a​t​i​o​n​ ​d​e​ ​b​a​s​k​e​t​s​.​ ​S​o​n​ ​a​p​p​r​o​c​h​e​ ​u​n​i​q​u​e​ ​d​e​ ​l​a​ ​c​o​n​c​e​p​t​i​o​n​ ​d​e​ ​s​n​e​a​k​e​r​s​ ​l​e​ ​d​i​s​t​i​n​g​u​e​ ​d​a​n​s​ ​l​'​i​n​d​u​s​t​r​i​e​.​ ​L​a​ ​p​a​s​s​i​o​n​ ​d​e​ ​C​r​u​z​e​ ​p​o​u​r​ ​l​e​ ​m​é​l​a​n​g​e​ ​d​e​ ​l​'​a​r​t​ ​e​t​ ​d​e​s​ ​c​h​a​u​s​s​u​r​e​s​ ​t​r​a​n​s​p​a​r​a​î​t​ ​d​a​n​s​ ​s​e​s​ ​c​r​é​a​t​i​o​n​s​.​ ​I​l​ ​e​s​t​ ​c​o​n​n​u​ ​p​o​u​r​ ​s​o​n​ ​s​o​u​c​i​ ​d​u​ ​d​é​t​a​i​l​ ​e​t​ ​s​e​s​ ​d​e​s​i​g​n​s​ ​i​n​n​o​v​a​n​t​s​ ​q​u​i​ ​c​a​p​t​i​v​e​n​t​ ​l​e​s​ ​a​m​a​t​e​u​r​s​ ​d​e​ ​s​n​e​a​k​e​r​s​ ​d​u​ ​m​o​n​d​e​ ​e​n​t​i​e​r​.
+		 */
+		artistDescription: string;
+		/**
+		 * c​r​é​a​t​i​o​n​s
+		 */
+		creations: string;
+		/**
+		 * D​é​c​o​u​v​r​i​r​ ​l​'​a​r​t​i​s​t​e
+		 */
+		discoverArtist: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -1738,6 +1764,32 @@ export type TranslationFunctions = {
 		 * Suivant
 		 */
 		next: () => LocalizedString;
+	};
+	artists: {
+		/**
+		 * Découvrez nos artistes
+		 */
+		title1: () => LocalizedString;
+		/**
+		 * leur style et leurs univers
+		 */
+		title2: () => LocalizedString;
+		/**
+		 * Plongez dans un monde créatif où le talent et l'originalité se rencontrent. Nos artistes talentueux apportent leur touche unique à chaque paire de sneakers, transformant de simples chaussures en véritables œuvres d'art. Du street art vibrant aux illustrations manga détaillées, en passant par les portraits réalistes inspirés du cinéma, chaque artiste possède son propre style distinctif.
+		 */
+		subtitle: () => LocalizedString;
+		/**
+		 * William Cruze est un artiste dévoué spécialisé dans la création et la personnalisation de baskets. Son approche unique de la conception de sneakers le distingue dans l'industrie. La passion de Cruze pour le mélange de l'art et des chaussures transparaît dans ses créations. Il est connu pour son souci du détail et ses designs innovants qui captivent les amateurs de sneakers du monde entier.
+		 */
+		artistDescription: () => LocalizedString;
+		/**
+		 * créations
+		 */
+		creations: () => LocalizedString;
+		/**
+		 * Découvrir l'artiste
+		 */
+		discoverArtist: () => LocalizedString;
 	};
 };
 

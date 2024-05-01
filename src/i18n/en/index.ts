@@ -267,6 +267,16 @@ const en = {
 		price: 'Price',
 		previous: 'Previous',
 		next: 'Next'
+	},
+	artists: {
+		title1: 'Discover our artists',
+		title2: 'their style and their universe',
+		subtitle:
+			'Immerse yourself in a creative world where talent and originality meet. Our talented artists add their unique touch to each pair of sneakers, transforming simple shoes into true works of art. From vibrant street art to detailed manga illustrations to realistic cinema-inspired portraits, each artist has their own distinctive style.',
+		artistDescription:
+			"William Cruze is a dedicated artist specializing in the creation and customization of sneakers. His unique approach to sneaker design sets him apart in the industry. Cruze's passion for blending art and footwear shines through in his designs. He is known for his attention to detail and innovative designs that captivate sneaker lovers around the world.",
+		creations: 'creations',
+		discoverArtist: 'Discover the artist'
 	}
 } satisfies BaseTranslation;
 

@@ -1,15 +1,14 @@
 <script lang="ts">
 	import Carousel from '$lib/components/carousel/Carousel.svelte';
 	import LL, { locale } from '$i18n/i18n-svelte';
-	import { items, artists, brands } from '../../data/example';
+	import { artists, brands } from '../../data/example';
 	import { assets, base } from '$app/paths';
 	import ArrowRightIcon from '$lib/components/icons/ArrowRightIcon.svelte';
 	import BrandIcon from '$lib/components/icons/BrandIcon.svelte';
 	import type { PageData } from './$types';
-	import type { Product } from '../../types/medusa';
 
 	export let data: PageData;
-	const products: Product[] = data.products as Product[];
+	const { products } = data;
 </script>
 
 <svelte:head>
@@ -107,9 +106,9 @@
 					</div>
 				</div>
 				<div class="stat text-center">
-					<div class="stat-value text-primary">{items.length}</div>
+					<div class="stat-value text-primary">{products.length}</div>
 					<div class="stat-title">
-						{#if items.length === 0 || items.length === 1}
+						{#if products.length === 0 || products.length === 1}
 							<p class="capitalize">{$LL.common.model()}</p>
 						{:else}
 							<p class="capitalize">{$LL.common.models()}</p>
@@ -127,7 +126,10 @@
 					</div>
 				</div>
 			</div>
-			<a href="{base}/{$locale}" class="btn btn-lg btn-link btn-primary no-underline lg:self-start p-0 hover:underline">
+			<a
+				href="{base}/{$locale}/products"
+				class="btn btn-lg btn-link btn-primary no-underline lg:self-start p-0 hover:underline"
+			>
 				{$LL.home.statistics.cta()}
 				<ArrowRightIcon />
 			</a>
@@ -143,17 +145,12 @@
 		<p>{$LL.home.brands.description()}</p>
 	</div>
 	<div class="grid grid-cols-2 md:grid-cols-5 items-center gap-8 p-8">
-		{#each brands as brand}
+		{#each brands.slice(0, 5) as brand}
 			<div class="flex justify-center">
-				<a href="/" class="w-40">
+				<div class="w-40">
 					<BrandIcon brand={brand.name} />
-				</a>
+				</div>
 			</div>
 		{/each}
-	</div>
-	<div class="flex justify-center">
-		<a href="/" class="hidden btn btn-primary rounded-btn w-fit lg:flex">
-			{$LL.home.brands.cta()}
-		</a>
 	</div>
 </section>
