@@ -2,16 +2,12 @@
 	import { assets, base } from '$app/paths';
 	import LL, { locale } from '$i18n/i18n-svelte';
 	import LocaleSwitcher from './LocaleSwitcher.svelte';
-	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import ShoppingCartIcon from '$lib/components/icons/ShoppingCartIcon.svelte';
 	import HamburgerIcon from '$lib/components/icons/HamburgerIcon.svelte';
 	import ThemeSwitcher from '$lib/components/common/ThemeSwitcher.svelte';
-	import type { Cart, CustomerInfos } from '../../../types/medusa';
 	import SearchBar from '$lib/components/common/SearchBar.svelte';
 	import SearchIcon from '$lib/components/icons/SearchIcon.svelte';
-
-	export let user: CustomerInfos | undefined;
-	export let cart: Cart | undefined;
+	import { page } from '$app/stores';
 </script>
 
 <header class="navbar sticky top-0 z-50 bg-base-100 p-4">
@@ -74,21 +70,23 @@
 		<div class="hidden lg:flex">
 			<LocaleSwitcher />
 		</div>
-		{#if user}
+		{#if $page.data.user}
 			<div class="dropdown dropdown-hover dropdown-end">
 				<div class="m-1 btn btn-ghost btn-circle">
 					<span class="indicator">
 						<ShoppingCartIcon />
-						<span class="badge indicator-item badge-sm badge-primary">{cart?.items?.length || 0}</span>
+						<span class="badge indicator-item badge-sm badge-primary">{$page.data.cart.items.length || 0}</span>
 					</span>
 				</div>
 				<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
 					<div class="card-body">
 						<span class="text-lg font-bold text-base-content"
-							>{cart?.items?.length || 0} {$LL.account.dashboard.orders.items()}</span
+							>{$page.data.cart.items.length || 0} {$LL.account.dashboard.orders.items()}</span
 						>
 						<span class="text-base-content"
-							>{$LL.account.dashboard.orders.details.subtotal()}: {(cart && (cart.subtotal / 100).toFixed(2)) || 0}
+							>{$LL.account.dashboard.orders.details.subtotal()}: {($page.data.cart &&
+								($page.data.cart.subtotal / 100).toFixed(2)) ||
+								0}
 							€</span
 						>
 						<div class="card-actions">
