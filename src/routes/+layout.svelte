@@ -5,14 +5,9 @@
 	import HeadHrefLangs from '$lib/components/common/HeadHrefLangs.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import CookiesConsent from '$lib/components/common/CookiesConsent.svelte';
-
-	export let data;
-
-	$: user = data?.user;
-	$: cart = data?.cart;
 </script>
 
-<Header {user} {cart} />
+<Header />
 <main class="container mx-auto flex flex-col px-10 space-y-10 md:space-y-16 lg:px-0">
 	<slot />
 </main>

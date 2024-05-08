@@ -6,7 +6,7 @@
 	import { assets } from '$app/paths';
 </script>
 
-<footer class="mt-20 bg-base-200">
+<footer class="mt-20 bg-neutral">
 	<div class="flex w-full justify-center px-10 py-6 md:justify-start">
 		<a href="/">
 			<img src="{assets}/images/logo_mysnkrs.svg" alt="Logo MySnkrs" class="w-28" />
@@ -14,36 +14,36 @@
 	</div>
 	<div class="footer justify-center px-10 py-6 md:justify-between">
 		<div class="flex w-full flex-col items-center md:items-start">
-			<span class="footer-title">{$LL.footer.usefulLinks()}</span>
-			<a href="/" class="link link-hover">{$LL.footer.artists()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.collections()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.concept()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.customerReviews()}</a>
+			<span class="footer-title text-white">{$LL.footer.usefulLinks()}</span>
+			<a href="/" class="link link-hover text-white">{$LL.footer.artists()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.collections()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.concept()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.customerReviews()}</a>
 		</div>
 		<div class="flex w-full flex-col items-center md:items-start">
-			<span class="footer-title">{$LL.footer.brands()}</span>
-			<a href="/" class="link link-hover">Nike</a>
-			<a href="/" class="link link-hover">Adidas</a>
-			<a href="/" class="link link-hover">Vans</a>
-			<a href="/" class="link link-hover">New Balance</a>
+			<span class="footer-title text-white">{$LL.footer.brands()}</span>
+			<a href="/" class="link link-hover text-white">Nike</a>
+			<a href="/" class="link link-hove text-white">Adidas</a>
+			<a href="/" class="link link-hover text-white">Vans</a>
+			<a href="/" class="link link-hover text-white">New Balance</a>
 		</div>
 		<div class="flex w-full flex-col items-center md:items-start">
-			<span class="footer-title">{$LL.footer.information()}</span>
-			<a href="/" class="link link-hover">{$LL.footer.legal()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.terms()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.conditions()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.cookies()}</a>
+			<span class="footer-title text-white">{$LL.footer.information()}</span>
+			<a href="/" class="link link-hover text-white">{$LL.footer.legal()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.terms()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.conditions()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.cookies()}</a>
 		</div>
 		<div class="flex w-full flex-col items-center md:items-start">
-			<span class="footer-title">{$LL.footer.help()}</span>
-			<a href="/" class="link link-hover">{$LL.footer.orderStatus()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.shipping()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.returns()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.payment()}</a>
-			<a href="/" class="link link-hover">{$LL.footer.contactUs()}</a>
+			<span class="footer-title text-white">{$LL.footer.help()}</span>
+			<a href="/" class="link link-hover text-white">{$LL.footer.orderStatus()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.shipping()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.returns()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.payment()}</a>
+			<a href="/" class="link link-hover text-white">{$LL.footer.contactUs()}</a>
 		</div>
 	</div>
-	<div class="footer flex flex-col-reverse items-center px-10 py-4 md:flex-row">
+	<div class="footer flex flex-col-reverse items-center px-10 py-4 md:flex-row text-white">
 		<div class="w-full">
 			<p class="text-center md:text-start">MySNKRS — Copyright © 2024 - {$LL.footer.allRightsReserved()}</p>
 		</div>
@@ -57,7 +57,7 @@
 					<TikTokIcon css="w-6 fill-current" />
 				</a>
 				<a href="/">
-					<FacebookIcon css="w-6 fill-current" />
+					<FacebookIcon css="w-6" />
 				</a>
 			</div>
 		</div>

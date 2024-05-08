@@ -15,6 +15,18 @@ export const actions: Actions = {
 			throw fail(501, { description: 'Failed to update cart item quantity', error: e });
 		}
 	},
+	deleteItemQuantity: async ({ request, locals }) => {
+		const formData = await request.formData();
+
+		const itemId: string = String(formData.get('itemId'));
+
+		try {
+			await medusa.removeFromCart(locals, itemId);
+		} catch (e) {
+			console.error(e);
+			throw fail(501, { description: 'Failed to update cart item quantity', error: e });
+		}
+	},
 	search: async ({ url, request, locals }) => {
 		const formData = await request.formData();
 		const query = formData.get('query');

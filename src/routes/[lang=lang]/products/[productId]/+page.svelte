@@ -2,7 +2,6 @@
 	import LL, { locale } from '$i18n/i18n-svelte';
 	import { base } from '$app/paths';
 	import type { PageData } from './$types';
-	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import TimeIcon from '$lib/components/icons/TimeIcon.svelte';
 	import InstalmentPayment from '$lib/components/icons/InstalmentPayment.svelte';
 	import ReturnIcon from '$lib/components/icons/ReturnIcon.svelte';
@@ -81,9 +80,6 @@
 							<button type="submit" class="btn btn-primary rounded-full">
 								{$LL.productDetails.addToCart()}
 								<ShoppingCartIcon />
-							</button>
-							<button type="button" class="btn btn-circle btn-ghost">
-								<HeartIcon />
 							</button>
 						</div>
 					</form>

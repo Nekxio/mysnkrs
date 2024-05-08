@@ -25,7 +25,7 @@ export const actions: Actions = {
 			await medusa.addToCart(locals, cookies, productId, 1);
 		} catch (e) {
 			console.error(e);
-			throw error(501, 'Failed to update profile');
+			throw error(501, 'Failed to update cart');
 		}
 	},
 	search: async ({ url, request, locals }) => {
