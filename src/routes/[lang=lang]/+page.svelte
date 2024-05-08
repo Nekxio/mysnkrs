@@ -17,7 +17,10 @@
 
 <section class="relative left-1/2 w-screen h-fit -translate-x-1/2 transform overflow-hidden">
 	<video class="w-full" autoplay muted loop>
-		<source src="https://videos.pexels.com/video-files/8519683/8519683-uhd_4096_1680_25fps.mp4" type="video/mp4" />
+		<source
+			src="https://s3-figma-videos-production-sig.figma.com/video/955890554601429583/TEAM/c6d5/edc5/-2108-48d1-a01b-e35c65d95db0?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HVZNXPGmIorBfMH~ouI97IyczXqi-gXMm1WAqFIfZMhzCzjU9NJ~ZYyDQKa~69Ay3jNV9KRKW5ZwnrzyznmRV72PfagqWDzWBN~kEyic3GCiln0Rj0GHXuBIcokxqNCqIL1BXg~meGBk9FC~bSljgvddml8lT3dsYi36dn3Jjlc~wPp2Ad7MJaMHInUyWb4iWUOyocsG9hIZeP8NOplyN6EGPL5-Z1p73Dwqz0~4yDpVPCYCdirNbJGVQyFBKNpQ7GnTzZWGLgKLB~2ssFNaTwfIC50nA4XVGNKfekIxwBCNnX8ZpSX8WZ~No84Ct0pL9Ukqpm5d76jOY70MxoMSIA__"
+			type="video/mp4"
+		/>
 		Your browser does not support the video tag.
 	</video>
 	<div class="absolute flex flex-col justify-center p-20 top-0 w-screen h-full backdrop-filter backdrop-blur-sm z-20">
