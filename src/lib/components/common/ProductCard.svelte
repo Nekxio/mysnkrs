@@ -1,5 +1,4 @@
 <script lang="ts">
-	import HeartIcon from '$lib/components/icons/HeartIcon.svelte';
 	import type { ProductTagDTO } from '@medusajs/types';
 	import { base } from '$app/paths';
 	import { locale } from '$i18n/i18n-svelte';
@@ -22,9 +21,6 @@
 		<figure class="h-4/6">
 			<img src={product.thumbnail} alt="item.name" class="aspect-video w-full h-full object-cover" />
 		</figure>
-		<button class="btn btn-circle btn-sm border-none bg-base-100/60 absolute right-2 top-2 hover:btn-primary">
-			<HeartIcon />
-		</button>
 
 		<div class="badge badge-primary absolute left-3 top-4">
 			{#if product.collection}

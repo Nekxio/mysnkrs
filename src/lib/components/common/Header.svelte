@@ -75,12 +75,6 @@
 			<LocaleSwitcher />
 		</div>
 		{#if user}
-			<button class="btn btn-circle btn-ghost hidden lg:flex">
-				<span class="indicator">
-					<HeartIcon />
-				</span>
-			</button>
-
 			<div class="dropdown dropdown-hover dropdown-end">
 				<div class="m-1 btn btn-ghost btn-circle">
 					<span class="indicator">

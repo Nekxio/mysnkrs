@@ -9,7 +9,6 @@ const stripe = new Stripe(
 );
 export const load: PageServerLoad = async ({ locals, cookies, params }) => {
 	const cart: Cart = await medusa.getCart(locals, cookies);
-	console.log(cart.shipping_methods);
 	const locale: 'fr' | 'en' = params.lang === 'fr' ? 'fr' : 'en';
 	await medusa.createPaymentSessions(locals);
 	const session = await stripe.checkout.sessions.create({
