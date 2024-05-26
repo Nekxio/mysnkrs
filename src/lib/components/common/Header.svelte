@@ -75,13 +75,15 @@
 				<div class="m-1 btn btn-ghost btn-circle">
 					<span class="indicator">
 						<ShoppingCartIcon />
-						<span class="badge indicator-item badge-sm badge-primary">{$page.data.cart.items.length || 0}</span>
+						<span class="badge indicator-item badge-sm badge-primary"
+							>{($page.data.cart && $page.data.cart.items.length) || 0}</span
+						>
 					</span>
 				</div>
 				<div class="dropdown-content z-[1] card card-compact w-52 p-2 shadow bg-base-200 text-primary-content">
 					<div class="card-body">
 						<span class="text-lg font-bold text-base-content"
-							>{$page.data.cart.items.length || 0} {$LL.account.dashboard.orders.items()}</span
+							>{($page.data.cart && $page.data.cart.items.length) || 0} {$LL.account.dashboard.orders.items()}</span
 						>
 						<span class="text-base-content"
 							>{$LL.account.dashboard.orders.details.subtotal()}: {($page.data.cart &&
